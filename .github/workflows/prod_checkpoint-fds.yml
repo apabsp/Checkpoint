@@ -1,7 +1,6 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
-#teste1
 
 name: Build and deploy Python app to Azure Web App - checkpoint-fds
 
@@ -30,26 +29,19 @@ jobs:
       
       - name: Install dependencies
         run: pip install -r requirements.txt
-
-      # - name: Cleaning testing files
-      #   run: |
-      #     rm .env
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
 
-      # - name: Zip artifact for deployment
-      #   run: |
-      #     zip release.zip ./* -r
+      - name: Zip artifact for deployment
+        run: zip release.zip ./* -r
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v3
         with:
           name: python-app
           path: |
-            .
+            release.zip
             !venv/
-
-
 
   deploy:
     runs-on: ubuntu-latest
@@ -65,18 +57,17 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: python-app
-          path: .
 
-      # - name: Unzip artifact for deployment
-      #   run: unzip release.zip
+      - name: Unzip artifact for deployment
+        run: unzip release.zip
 
       
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_BB9F539030424E3EA9364DA8116F1209 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A2C1CD7B5BDB4F8B86F84A1374F67764 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_6694C584D9914BBB8BB2967043E2D682 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_19DA77CF52D54842BA1C24805EA7E24D }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A8EDF7200AEE42F48CD3DC77D57E047E }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_88FFB1520C4A4DFEAD7A38636D71A0A5 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
