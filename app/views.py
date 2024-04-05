@@ -47,3 +47,20 @@ class SearchView(View):
             context["games"] = games
 
             return render(req, 'app/search.html', context)
+        
+            return render(req, 'app/search.html', context)
+
+class gamePageView(View):
+
+    #def get(self, req):
+    #    context = displayImagem(request,idGame)
+    def get(self, req):
+        #if(req.user.is_authenticated):
+         #   context = displayImagem(req)
+         pass
+
+    def displayImagem(request, idGame):
+    
+        jogoDisplayed = models.Game.objects.get(pk=idGame)
+        return render(request, 'gamePage.html', {'game': jogoDisplayed})
+    
