@@ -44,6 +44,14 @@
     background-color: var(--primary);
     transition: all 50ms ease-in-out;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.liked {
+    fill: var(--zinc)
 }
 
 #like:hover {
