@@ -61,6 +61,7 @@ class gamePageView(View):
          pass
     def post(self, req):
         #cadastrar rating do objeto
+        pass
 
     def displayImagem(request, idGame):
     
