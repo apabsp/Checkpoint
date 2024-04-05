@@ -11,6 +11,10 @@ hr {
     color: var(--primary);
 }
 
+a {
+    text-decoration: none;
+}
+
 .container-games {
     flex: 1 1 0%;
     background-color: var(--background2);
@@ -34,7 +38,7 @@ hr {
     height: 200px;
 }
 
-.game > img {
+.game > a > img {
     width: 150px;
     height: 200px;
     object-fit: cover;

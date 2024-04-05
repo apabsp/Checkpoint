@@ -1,0 +1,55 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'root/styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'app/styles/app.css' %}">
+    <link rel="stylesheet" href="{% static 'app/styles/game.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="container-game">
+        <div>
+            <img src="{{ game.image }}" alt="">
+            <div>
+                <button id="like">Curtir {{ likes }}</button>
+                <div>
+                    avaliar
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1>{{ game.name }}</h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        function getCSRFToken() {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== "") {
+                var cookies = document.cookie.split(";");
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    if (cookie.substring(0, 10) === "csrftoken=") {
+                        cookieValue = decodeURIComponent(cookie.substring(10));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        document.getElementById("like").addEventListener("click", async () => {
+            const res = await fetch("/app/game/{{game.id}}", {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": getCSRFToken()
+                }
+            })
+            const data = await res.json();
+            alert(data.message.concat(" {{ game.name }}"))
+        })
+    </script>
+{% endblock %}
