@@ -2,12 +2,21 @@
 {% load static %}
 
 {% block head %}
-    <link rel="stylesheet" href="{% static 'app/styles/app.css' %}">
     <link rel="stylesheet" href="{% static 'root/styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'app/styles/app.css' %}">
+    <link rel="stylesheet" href="{% static 'app/styles/search.css' %}">
 {% endblock %}
 
 {% block body %}
-    <div>
-        search
+    <div class="container-games">
+        {% for game in games %}
+            <div class="game">
+                <img src="{{ game.image }}" alt="game name" width="150" height="200">
+                <div>
+                    <h1>{{ game.name }}</h1>
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
     </div>
 {% endblock %}
