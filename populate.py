@@ -14,7 +14,11 @@ for game in games:
     platforms = game['platforms']
     screenshots = game['screenshots']
 
-    gamedb = Game.objects.create(name=name, image=image, platforms=platforms, screenshots=screenshots)
-    gamedb.save()
+    try:
+        Game.objects.get(name=name)
+        continue
+    except:
+        gamedb = Game.objects.create(name=name, image=image, platforms=platforms, screenshots=screenshots)
+        gamedb.save()
 
-    print(gamedb)
+        print(gamedb)

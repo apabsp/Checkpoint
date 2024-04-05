@@ -21,15 +21,7 @@ class RootView(View):
             context = getUser(req)
             return render(req, 'app/app.html', context)
         
-    def _getUser(self, req):
-        user = User.objects.get(username=req.user)
-        context = {
-            "user": {
-                "username": user.username,
-                "email": user.email
-            }
-        }
-        return context
+        return redirect("autenticacao:signin")
     
 class SearchView(View):
     def get(self, req):
@@ -43,6 +35,8 @@ class SearchView(View):
             context["games"] = games
 
             return render(req, 'app/search.html', context)
+        
+        return redirect("autenticacao:signin")
 
 class GameView(View):
     def get(self, req, id):
@@ -64,6 +58,8 @@ class GameView(View):
                 return render(req, 'app/game.html', context)
             except:
                 return redirect("app:root")
+        
+        return redirect("autenticacao:signin")
             
     def post(self, req, id):
         '''like game'''
@@ -86,3 +82,5 @@ class GameView(View):
                 return JsonResponse({"message": "Curtiu" if like.liked else "Deixou de curtir"})
             except:
                 return JsonResponse({"message": "Jogo nao existe"}, status=404)
+            
+        return JsonResponse({"message": "Você precisa estar logado"}, status=400)
