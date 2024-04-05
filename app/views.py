@@ -51,11 +51,11 @@ class GameView(View):
             
             try:
                 game = Game.objects.get(pk=id)
-                likes = game.like_set.all()
+                likes = game.like_set.filter(liked="True")
 
                 context["game"] = game
                 try:
-                    context["liked"] = likes.get(user=req.user).liked
+                    context["liked"] = "liked" if likes.get(user=req.user).liked else ""
                 except:
                     context["liked"] = False
 
@@ -80,6 +80,8 @@ class GameView(View):
                     for like in likes:
                         like.liked = not like.liked
                         like.save()
+
+                like = game.like_set.get(user=req.user)
 
                 return JsonResponse({"message": "Curtiu" if like.liked else "Deixou de curtir"})
             except:
