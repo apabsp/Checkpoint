@@ -1,0 +1,76 @@
+:root {
+    --primary: #424242;
+    --secondary: #929292;
+    --zinc: #E0E0E0;
+}
+
+* {
+    color: var(--zinc);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4rem;
+    width: 100%;
+    height: 50px;
+}
+
+form {
+    height: 40px;
+    flex: 1 1 0%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+form > input {
+    width: 100%;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    background-color: var(--primary);
+}
+
+form > button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+form > button:hover {
+    background-color: var(--secondary);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.min {
+    min-width: 50px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.logo {
+    background-color: var(--primary);
+    border-radius: 1rem;
+    width: 100px;
+    height: 40px;
+}
