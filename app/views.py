@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.contrib.auth.models import User
+from .models import Game
 
 def getUser(req):
     user = User.objects.get(username=req.user)
@@ -34,5 +35,9 @@ class SearchView(View):
             context = getUser(req)
             
             searchTerm = req.GET.get("search")
+
+            games = Game.objects.all().filter(name__contains=searchTerm)
+
+            context["games"] = games
 
             return render(req, 'app/search.html', context)
