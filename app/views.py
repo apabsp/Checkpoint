@@ -57,8 +57,10 @@ class gamePageView(View):
     def get(self, req):
         if(req.user.is_authenticated):
          #   context = displayImagem(req)
-         
+
          pass
+    def post(self, req):
+        #cadastrar rating do objeto
 
     def displayImagem(request, idGame):
     

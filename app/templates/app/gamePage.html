@@ -15,7 +15,7 @@
             <!--Aqui colocaremos a imagem do jogo e botão de 5 estrelas dps)-->
             <img src="{{ jogoDisplayed.image }}" alt="imagem do jogo">
 
-            <form action="" method="POST"> <!--5 estrelas-->
+            <form action="../../views.py/displayImagem" method="POST"> <!--5 estrelas-->    {%csrf_token%}
                 <input type="button">
 
                 <input type="submit" value="Cadastrar">
