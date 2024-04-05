@@ -2,4 +2,6 @@ venv
 
 db.sqlite3
 
+transformGamesJson.js
+
 __pycache__
