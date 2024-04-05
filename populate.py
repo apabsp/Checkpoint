@@ -8,13 +8,13 @@ json_string = '[{"name":"Grand Theft Auto V","image":"https://media.rawg.io/medi
 # Parse the JSON string
 games = json.loads(json_string)
 
-# for game in games:
-#     name = game['name']
-#     image = game['image']
-#     platforms = game['platforms']
-#     screenshots = game['screenshots']
+for game in games:
+    name = game['name']
+    image = game['image']
+    platforms = game['platforms']
+    screenshots = game['screenshots']
 
-#     gamedb = Game.objects.create(name=name, image=image, platforms=platforms, screenshots=screenshots)
-#     gamedb.save()
+    gamedb = Game.objects.create(name=name, image=image, platforms=platforms, screenshots=screenshots)
+    gamedb.save()
 
-#     print(gamedb)
+    print(gamedb)
