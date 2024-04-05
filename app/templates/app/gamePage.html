@@ -6,11 +6,14 @@
     <link rel="stylesheet" href="{% static 'root/styles/style.css' %}">
 {% endblock %}
 
+{% block body %}
+    <h1>teste!</h1>
+
     <div class = "gameClass">
 
         <div class="leftSide">
-            
             <!--Aqui colocaremos a imagem do jogo e botão de 5 estrelas dps)-->
+            <img src="{{ jogoDisplayed.image }}" alt="imagem do jogo">
         </div>
         <div class="rightSide">
             <!--Aqui colocaremos fazer Review(e botão de wishlist dps) -->
@@ -19,3 +22,4 @@
         </div>
 
     </div>
+{% endblock %}

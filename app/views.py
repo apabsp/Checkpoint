@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth.models import User
+from . import models
 from .models import Game
 from django.http import JsonResponse
 
