@@ -30,7 +30,7 @@ class SearchView(View):
             
             searchTerm = req.GET.get("search")
 
-            games = Game.objects.all().filter(name__contains=searchTerm)
+            games = Game.objects.all().filter(name__icontains=searchTerm)
 
             context["games"] = games
 
