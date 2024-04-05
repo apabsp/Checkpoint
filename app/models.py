@@ -4,8 +4,9 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Game(models.Model):
     name = models.CharField(max_length=50) #A API tem q mandar pra esse models ok?
-    imageUrl = models.CharField(max_length=200, default=False)
+    image = models.CharField(max_length=200, default=False)
     platforms = models.JSONField(default=dict)
+    screenshots = models.JSONField(default=dict)
     likes = models.IntegerField(default=0)
 
     def __str__(self) -> str:
