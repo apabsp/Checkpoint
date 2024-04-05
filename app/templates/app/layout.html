@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'root/images/favicon.ico' %}" />
         <link rel="stylesheet" href="{% static 'app/styles/header.css' %}">
 
         {% block head %} {% endblock %}
@@ -16,11 +17,12 @@
     </head>
     <body class="poppins-medium">
         <header>
-            <div class="logo">
-            </div>
+            <a href="{% url 'app:root' %}" class="logo">
+                <img src="{% static 'root/images/logo.png' %}" alt="CheckPoint">
+            </a>
     
             <form method="get" action="/app/search">
-                <input type="text" name="search">
+                <input type="text" name="search" placeholder="Pesquise um jogo">
                 <button type="submit">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                 </button>
@@ -38,9 +40,8 @@
             </div>
         </header>
 
-        {% block body %}
+        {% block body %} {% endblock %}
         
-        {% endblock %}
-
+        {% block script %} {% endblock %}
     </body>
 </html>

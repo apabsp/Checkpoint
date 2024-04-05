@@ -7,10 +7,14 @@ class Game(models.Model):
     image = models.CharField(max_length=200, default=False)
     platforms = models.JSONField(default=dict)
     screenshots = models.JSONField(default=dict)
-    likes = models.IntegerField(default=0)
 
     def __str__(self) -> str:
         return self.name
+    
+class Like(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    game = models.ForeignKey(Game, on_delete=models.CASCADE)
+    liked = models.BooleanField(default=True)
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, verbose_name='Usuário')

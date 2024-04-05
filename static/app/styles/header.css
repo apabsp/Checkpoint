@@ -69,8 +69,14 @@ form > button:hover {
 }
 
 .logo {
-    background-color: var(--primary);
-    border-radius: 1rem;
-    width: 100px;
-    height: 40px;
+    max-width: 100px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo > img {
+    width: 70%;
+    object-fit: cover;
 }

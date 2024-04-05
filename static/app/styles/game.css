@@ -1,0 +1,59 @@
+:root {
+    --background: #181818;
+    --background2: #252525;
+    --primary: #424242;
+    --secondary: #929292;
+    --zinc: #E0E0E0;
+}
+
+.container-game {
+    flex: 1 1 0%;
+    display: flex;
+    gap: 5rem;
+    padding: 1rem 3rem;
+}
+
+.container-game > div > img {
+    width: 452px;
+    height: 562px;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 1px solid var(--primary);
+}
+
+.container-game > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container-game > div > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#like {
+    width: 100px;
+    height: 40px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    border-radius: 0.5rem;
+    border: none;
+    background-color: var(--primary);
+    transition: all 50ms ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.liked {
+    fill: var(--zinc)
+}
+
+#like:hover {
+    background-color: var(--background2);
+}
