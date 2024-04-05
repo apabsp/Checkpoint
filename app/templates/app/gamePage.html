@@ -1,0 +1,44 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'app/styles/app.css' %}">
+    <link rel="stylesheet" href="{% static 'root/styles/style.css' %}">
+{% endblock %}
+
+{% block body %}
+    <h1>teste!</h1>
+
+    <div class = "gameClass">
+
+        <div class="leftSide">
+            <!--Aqui colocaremos a imagem do jogo e botão de 5 estrelas dps)-->
+            <img src="{{ jogoDisplayed.image }}" alt="imagem do jogo">
+
+            <form action="../../views.py/displayImagem" method="POST"> <!--5 estrelas-->    {%csrf_token%}
+                <input type="button">
+
+                <input type="submit" value="Cadastrar">
+
+            </form>
+
+        </div>
+        <div class="rightSide">
+            <!--Aqui colocaremos fazer Review(e botão de wishlist dps) -->
+            <div class = "review">
+
+                <label for="">Faça sua Review!</label>
+                <form actions="">
+                    <input type="text" name="review" id="">
+                </form>
+
+                <br>
+
+            </div>
+
+
+        </div>
+
+    </div>
+{% endblock %}
+
