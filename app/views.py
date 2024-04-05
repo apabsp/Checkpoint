@@ -55,8 +55,9 @@ class gamePageView(View):
     #def get(self, req):
     #    context = displayImagem(request,idGame)
     def get(self, req):
-        #if(req.user.is_authenticated):
+        if(req.user.is_authenticated):
          #   context = displayImagem(req)
+         
          pass
 
     def displayImagem(request, idGame):
