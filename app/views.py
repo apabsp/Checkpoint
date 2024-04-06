@@ -84,3 +84,8 @@ class GameView(View):
                 return JsonResponse({"message": "Jogo nao existe"}, status=404)
             
         return JsonResponse({"message": "Você precisa estar logado"}, status=400)
+
+class paraCriarReview(View):
+    def post(self):
+        print("OI")
+        pass

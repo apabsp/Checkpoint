@@ -30,3 +30,9 @@ class Rating(models.Model):
     nota = models.FloatField(validators=[MinValueValidator(0), MaxValueValidator(5)])
     #adicionar if caso game já tenha sido avaliado
 #  - tnk
+
+class Review(models.Model):
+   user = models.ForeignKey(User, on_delete=models.CASCADE)
+   game = models.ForeignKey(Game, on_delete=models.CASCADE)
+   reviewText = models.TextField(max_length=10000)
+   

@@ -57,3 +57,43 @@
 #like:hover {
     background-color: var(--background2);
 }
+.review {
+    background-color: #424242;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 90px;
+    color: rgb(0, 0, 0);
+    width: 600px;
+    height: 200px;
+    
+}
+
+.reviewText{
+    padding: 50px;
+    color: white;
+    background-color: #929292;
+    resize: none; 
+    min-height: 50px; 
+    max-height: 200px; 
+    overflow-y: auto; 
+    width: 400px; 
+    padding: 10px; 
+    border-radius: 10px;  
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.botaoReview {
+    float: right; /* Float the button to the right */
+    margin-left: 10px; /* Add 10px margin to the left */
+    margin-right: 20px; /* Add margin to the right side */
+    height: 150px; /* Set the same height as the textarea */
+    width: 100px; /* Set a fixed width for the button */
+    border-radius: 10px; /* Round the button borders */
+    border: none; /* Remove the button border */
+    background-color: #007bff; /* Set button background color */
+    color: #fff; /* Set button text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
