@@ -24,9 +24,11 @@
         <div>
             <h1>{{ game.name }}</h1>
             <div class = "review"> 
+                <div class="user-review">
+                    <p>{{ user_review }}</p>
+                </div>
                 <form action = "{% url 'app:submit_review' id=game.id %}" method="post"> 
                     {% csrf_token %}
-                    {{reviewText}}
                     <textarea name="textoDaReview" class="reviewText"></textarea> <!--TENHO QUE JOGAR ESSE REVIEW TEXT NO MEU POST!!!! para registrar-->
                     <button class = "boataoReview" type="submit" value = "cadastrar">oh my god the button</button>
                 </form>

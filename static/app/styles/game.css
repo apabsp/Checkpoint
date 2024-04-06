@@ -60,7 +60,7 @@
 .review {
     background-color: #424242;
     border-radius: 10px;
-    margin-right: 20px;
+    margin-right: 0px;
     padding: 90px;
     color: rgb(0, 0, 0);
     width: 600px;
@@ -71,7 +71,7 @@
 .reviewText{
     padding: 50px;
     color: white;
-    background-color: #929292;
+    background-color: #007bff;
     resize: none; 
     min-height: 50px; 
     max-height: 200px; 
@@ -92,7 +92,7 @@
     width: 100px; /* Set a fixed width for the button */
     border-radius: 10px; /* Round the button borders */
     border: none; /* Remove the button border */
-    background-color: #007bff; /* Set button background color */
+    background-color: red; /* Set button background color */
     color: #fff; /* Set button text color */
     cursor: pointer; /* Change cursor to pointer on hover */
 }

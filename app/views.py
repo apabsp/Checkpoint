@@ -47,8 +47,13 @@ class GameView(View):
             try:
                 game = Game.objects.get(pk=id)
                 likes = game.like_set.filter(liked="True")
-
-                context["game"] = game
+                reviewTexto = models.Review.objects.filter(user=req.user, game=game, id = 1)
+                review = reviewTexto.first()
+                review_text = review.reviewText
+                context = {
+                    'game': game,
+                    'user_review': review_text
+                }
                 try:
                     context["liked"] = "liked" if likes.get(user=req.user).liked else ""
                 except:
@@ -91,17 +96,62 @@ class paraCriarReview(View):
     print("eu chego aqui??")
     def post(self, req, id):
         if req.user.is_authenticated:
-            print("hello am I authenticated?")
             try:
                 game = Game.objects.get(pk=id)
                 review_text = req.POST.get('textoDaReview')
 
+                
+                existing_review = models.Review.objects.filter(user=req.user, game=game).first()
 
-                novaReview = models.Review(user = req.user, game = Game.objects.get(pk=id), reviewText = review_text)
-                novaReview.save()
-                return JsonResponse({"message": "Review adicionada!"})
+                if existing_review:
+                    existing_review.reviewText = review_text
+                    existing_review.save()
+                    return JsonResponse({"message": "Review atualizada!"})
+                else:
+                    novaReview = models.Review(user=req.user, game=game, reviewText=review_text)
+                    novaReview.save()
+                    return JsonResponse({"message": "Review adicionada!"})
             except Game.DoesNotExist:
-                print("jogo não encontrado")
-                return JsonResponse({"message": "Jogo nao existe"}, status=404)
+                return JsonResponse({"message": "Jogo não encontrado"}, status=404)
         else:
             return JsonResponse({"message": "Você precisa estar logado"}, status=400)
+
+
+
+        
+        # if req.user.is_authenticated:
+        #     print("hello am I authenticated?")
+        #     try:
+        #         game = Game.objects.get(pk=id)
+        #         review_text = req.POST.get('textoDaReview')
+
+
+        #         novaReview = models.Review(user = req.user, game = Game.objects.get(pk=id), reviewText = review_text)
+        #         if len(novaReview.objects.all()):      
+        #             novaReview.objects.all().delete()
+        #             #fiz uma gambiarra aqui pra garantir que só fique uma review por usuário
+        #         novaReview.save()
+
+        #         return JsonResponse({"message": "Review adicionada!"})
+        #     except Game.DoesNotExist:
+        #         print("jogo não encontrado")
+        #         return JsonResponse({"message": "Jogo nao existe"}, status=404)
+        # else:
+        #     return JsonResponse({"message": "Você precisa estar logado"}, status=400)
+
+    class GameView(View):
+        def get(self, req, id):
+            # Fetch the game object
+            game = Game.objects.get(pk=id)
+            
+            # Fetch the review associated with the current user and the game
+            user_review = None
+            if req.user.is_authenticated:
+                user_review = models.Review.objects.filter(user=req.user, game=game).first()
+            
+            # Pass the game and user's review to the template context
+            context = {
+                'game': game,
+                'user_review': user_review,
+            }
+            return render(req, 'app/game.html', context)
