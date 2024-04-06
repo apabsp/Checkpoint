@@ -39,10 +39,11 @@ class SearchView(View):
         return redirect("autenticacao:signin")
 
 class GameView(View):
+    #print("do I even get here?") got here
     def get(self, req, id):
         if(req.user.is_authenticated):
             context = getUser(req)
-            
+            #print("my user indeed is authenticated") got here in anonymous tab
             try:
                 game = Game.objects.get(pk=id)
                 likes = game.like_set.filter(liked="True")
@@ -84,8 +85,23 @@ class GameView(View):
                 return JsonResponse({"message": "Jogo nao existe"}, status=404)
             
         return JsonResponse({"message": "Você precisa estar logado"}, status=400)
-
+    
+    
 class paraCriarReview(View):
-    def post(self):
-        print("OI")
-        pass
+    print("eu chego aqui??")
+    def post(self, req, id):
+        if req.user.is_authenticated:
+            print("hello am I authenticated?")
+            try:
+                game = Game.objects.get(pk=id)
+                review_text = req.POST.get('textoDaReview')
+
+
+                novaReview = models.Review(user = req.user, game = Game.objects.get(pk=id), reviewText = review_text)
+                novaReview.save()
+                return JsonResponse({"message": "Review adicionada!"})
+            except Game.DoesNotExist:
+                print("jogo não encontrado")
+                return JsonResponse({"message": "Jogo nao existe"}, status=404)
+        else:
+            return JsonResponse({"message": "Você precisa estar logado"}, status=400)
