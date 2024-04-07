@@ -148,15 +148,19 @@ Para rodar em ambiente **local**, siga os passos:
 **Relato Programação em Par:**
 - **_Clara e Heloísa_**:
     Realizamos pair programming para implementar um novo recurso de avaliação de parâmetro 5 estrelas.
-    Resultado: A implementação, infelizmente, foi falha. Apesar das tentativas de ambas as participantes de implementar a história, acabamos criando mais bugs         e issues dentro do código e preferimos não realizar o commit para não atrapalhar o andamento do projeto como um todo, entretanto, a nossa relação como uma         equipe foi fortalecida, é como aquele velho ditado "Os erros são os degraus pelos quais subimos à sabedoria.".
-    Conclusão: Pair programming fortaleceu nossa colaboração e confiança como equipe.
+  
+    **Resultado:** A implementação, infelizmente, foi falha. Apesar das tentativas de ambas as participantes de implementar a história, acabamos criando mais bugs e issues dentro do código e preferimos não             realizar o commit para não atrapalhar o andamento do projeto como um todo, entretanto, a nossa relação como uma equipe foi fortalecida, é como aquele velho ditado "Os erros são os degraus pelos quais             subimos à sabedoria.".
+  
+    **Conclusão:** Pair programming fortaleceu nossa colaboração e confiança como equipe.
 
 - **_João Pedro Fontes e Antonio_**:
-    Realizamos pair programming para implementar a criação de uma nova review. 
-    Resultado: Após algumas tentativas iniciais de como poderiamos fazer isso, fazendo os modelos do banco de dados e fazendo alterações no html, conseguimos implementar com sucesso, retirando alguns bugs antes do commit como: 
+    Realizamos pair programming para implementar a criação de uma nova review.
+  
+    **Resultado:** Após algumas tentativas iniciais de como poderiamos fazer isso, fazendo os modelos do banco de dados e fazendo alterações no html, conseguimos implementar com sucesso, retirando alguns bugs antes do commit como: 
     - **Retorno JSON errado** após a criação da review;
     Além disso, reslvemos algumas issues no github.
-    Conclusão: O pair programming serviu para aprendermos mais sobre a implementação das novas features do projeto Checkpoint, além do trabalho em equipe.
+
+    **Conclusão:** O pair programming serviu para aprendermos mais sobre a implementação das novas features do projeto Checkpoint, além do trabalho em equipe.
 
 - **_Larissa e João Pedro Maranhão_**: ...
 
