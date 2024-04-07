@@ -161,8 +161,8 @@ Para rodar em ambiente **local**, siga os passos:
   
   **Conclusão:** O Pair Programming aumentou nossa determinação para continuar estudando e tentando, afim de colaborar com o grupo.
 
-- **_João Pedro Fontes e Antonio_**:
-    Realizamos pair programming para implementar a pesquisa por jogos na base de daos, curtir um jogo e fazer a criação de uma nova review para o jogo selecionado.
+- **_João Pedro Fontes e Antonio Paulo Barros_**:
+    Realizamos pair programming para implementar a pesquisa por jogos na base de dados, curtir um jogo e fazer a criação de uma nova review para o jogo selecionado.
   
     **Resultado:** Após algumas pesquisas e tentativas iniciais de como poderiamos fazer essas novas features, fazendo os modelos do banco de dados e fazendo alterações no html, conseguimos implementar com sucesso essas histórias, retirando alguns bugs antes do commit como: 
     - **Retorno JSON errado** após a criação da review;
