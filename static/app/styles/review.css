@@ -1,0 +1,39 @@
+:root {
+    --background: #181818;
+    --background2: #252525;
+    --primary: #424242;
+    --secondary: #929292;
+    --zinc: #E0E0E0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.container-content {
+    flex: 1 1 0%;
+    display: flex;
+    gap: 5rem;
+    padding: 1rem 3rem;
+}
+
+.container-content > div > img {
+    width: 452px;
+    height: 562px;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 1px solid var(--primary);
+}
+
+.container-review {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.review {
+    background-color: var(--primary);
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+}

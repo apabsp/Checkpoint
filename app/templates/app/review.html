@@ -1,0 +1,30 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'root/styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'app/styles/app.css' %}">
+    <link rel="stylesheet" href="{% static 'app/styles/review.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="container-content">
+        <div>
+            <img src="{{ game.image }}" alt="">
+        </div>
+
+        <div class="container-review">
+            <h1>{{ game.name }}</h1>
+            <div class="review"> 
+                {{review.text}}
+            </div> 
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        
+    </script>
+{% endblock %}
