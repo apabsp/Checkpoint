@@ -34,6 +34,5 @@ class Rating(models.Model):
 class Review(models.Model):
    user = models.ForeignKey(User, on_delete=models.CASCADE)
    game = models.ForeignKey(Game, on_delete=models.CASCADE)
-   #reviewText = models.TextField(max_length=10000, default="minha Review legal!")
    text = models.TextField(max_length=10000, default="minha Review legal!")
    

@@ -6,6 +6,10 @@
     --zinc: #E0E0E0;
 }
 
+h1 {
+    margin: 0;
+}
+
 .container-game {
     flex: 1 1 0%;
     display: flex;
@@ -57,43 +61,130 @@
 #like:hover {
     background-color: var(--background2);
 }
-.review {
-    background-color: #424242;
-    border-radius: 10px;
-    margin-right: 0px;
-    padding: 90px;
-    color: rgb(0, 0, 0);
-    width: 600px;
-    height: 200px;
-    
+
+#addReview {
+    border: none;
+    background: var(--primary);
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+    padding: 1rem;
+    font-family: "Poppins", sans;
+    border-radius: 1rem;
 }
 
-.reviewText{
-    padding: 50px;
-    color: white;
-    background-color: #007bff;
-    resize: none; 
-    min-height: 50px; 
-    max-height: 200px; 
-    overflow-y: auto; 
-    width: 400px; 
-    padding: 10px; 
-    border-radius: 10px;  
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+#addReview:hover {
+    background: var(--background2);
 }
 
-.botaoReview {
-    float: right; /* Float the button to the right */
-    margin-left: 10px; /* Add 10px margin to the left */
-    margin-right: 20px; /* Add margin to the right side */
-    height: 150px; /* Set the same height as the textarea */
-    width: 100px; /* Set a fixed width for the button */
-    border-radius: 10px; /* Round the button borders */
-    border: none; /* Remove the button border */
-    background-color: red; /* Set button background color */
-    color: #fff; /* Set button text color */
-    cursor: pointer; /* Change cursor to pointer on hover */
+.review-modal {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 99999;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 100ms ease-in-out;
+    opacity: 0;
 }
 
+.review-modal.active {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 99999;
+    pointer-events: all;
+    background-color: #181818b0;
+    backdrop-filter: blur(0.5rem);
+    opacity: 1;
+}
+
+.review-modal > div {
+    background-color: var(--primary);
+    border-radius: 1rem;
+    width: 30rem;
+    height: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.review-modal > div > button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.review-modal > div > form {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-modal > div > form > textarea {
+    border: none;
+    background: var(--background2);
+    border-radius: 1rem;
+    width: auto;
+    max-width: 100%;
+    font-size: 1rem;
+    resize: none;
+    min-height: 10rem;
+    padding: 1rem;
+}
+
+.review-modal > div > form > label {
+    cursor: pointer;
+}
+
+.review-modal > div > form > button {
+    font-family: "Poppins", sans;
+    background: var(--background2);
+    cursor: pointer;
+    border: none;
+    padding: 1rem;
+    width: auto;
+    max-width: fit-content;
+    margin-top: 1rem;
+    margin-left: auto;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.review-modal > div > form > button:hover {
+    background: var(--background);
+}
+
+.container-user-reviews {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.container-user-reviews > a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: center;
+}
+
+.container-user-reviews > a > div {
+    box-sizing: border-box;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+}

@@ -24,17 +24,45 @@
         </div>
         <div>
             <h1>{{ game.name }}</h1>
-            <div class = "review"> 
-                <div class="user-review">
-                    <p>{{ user_review }}</p>
+
+            {% if review %}
+                <div>
+                    {{ review.text }}
                 </div>
-                <form action = "" method="post"> 
-                    {% csrf_token %}
-                    <input type="hidden" name="action" value="submit_review">
-                    <textarea name="textoDaReview" class="reviewText"></textarea> <!--TENHO QUE JOGAR ESSE REVIEW TEXT NO MEU POST!!!! para registrar-->
-                    <button class = "boataoReview" type="submit" value = "cadastrar">oh my god the button</button>
-                </form>
-            </div> 
+            {% else %}
+                <div class="">
+                    <button id="addReview">Adicionar Review</button>
+                </div>
+            {% endif %}
+            
+            
+            <div class="container-user-reviews">
+                {% for userReview in allReviews %}
+                    <a href="/app/review/{{ userReview.id }}">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        {{userReview.user}}
+                    </a>
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+
+    <div class="review-modal">
+        <div>
+            <button id="closeModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> 
+            </button>
+
+            <form method="post">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="submit_review">
+                <label for="texto">Review</label>
+                <textarea id="texto" name="textoDaReview" class="reviewText"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </div>
 
@@ -58,7 +86,7 @@
         }
 
         document.getElementById("like").addEventListener("click", async () => {
-            const res = await fetch("/app/game/{{game.id}}", {
+            const res = await fetch("/app/game/{{game.id}}/", {
                 method: "POST",
                 headers: {
                     "X-CSRFToken": getCSRFToken()
@@ -71,6 +99,14 @@
             if(res.ok) {
                 window.location.reload();
             }
-        })
+        });
+
+        function toggleModal() {
+            const modal = document.getElementsByClassName("review-modal")[0];
+            modal.classList.toggle("active");
+        }
+
+        document.getElementById("addReview").addEventListener("click", toggleModal)
+        document.getElementById("closeModal").addEventListener("click", toggleModal)
     </script>
 {% endblock %}
