@@ -181,3 +181,10 @@ Para rodar em ambiente **local**, siga os passos:
 <br>
 
 **Print do quadro da sprint 1 no Jira:**
+
+![Sprint 1](https://github.com/apabsp/Checkpoint/assets/63313892/5769e078-b164-4a1e-9164-becbb4fe3281)
+
+![Backblog sprint 1](https://github.com/apabsp/Checkpoint/assets/63313892/a07fe2c3-6e66-445d-b537-5dc183d346e4)
+
+![Backlog](https://github.com/apabsp/Checkpoint/assets/63313892/79b42652-99a6-4441-9dea-453deb478423)
+
