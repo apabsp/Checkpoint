@@ -145,5 +145,11 @@ Para rodar em ambiente **local**, siga os passos:
 
 ## Entrega 2:
 
-
+**Relato Programação em Par:**
+    - Clara e Heloísa:
+        Realizamos pair programming para implementar um novo recurso de avaliação de parâmetro 5 estrelas.
+        Resultado: A implementação, infelizmente, foi falha. Apesar das tentativas de ambas as participantes de implementar a história, acabamos criando mais bugs         e issues dentro do código e preferimos não realizar o commit para não atrapalhar o andamento do projeto como um todo, entretanto, a nossa relação como uma         equipe foi fortalecida, é como aquele velho ditado "Os erros são os degraus pelos quais subimos à sabedoria.".
+        Conclusão: Pair programming fortaleceu nossa colaboração e confiança como equipe.
+    - João Pedro Fontes e João Pedro Maranhão:
+    - Antônio e Larissa:
 
