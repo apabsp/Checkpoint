@@ -28,14 +28,73 @@ h1 {
 .container-game > div {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 2rem;
 }
 
-.container-game > div > div {
+.container-game > div:nth-child(1) > div {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.container-data {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    overflow-x: auto;
+}
+
+.review {
+    width: auto;
+    background-color: var(--primary);
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.container-user-reviews {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.user-reviews {
+    flex: 1 1 0%;
+    max-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    overflow-x: auto;
+}
+
+.user-reviews > a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    text-align: center;
+}
+
+.user-reviews > a > span {
+    max-width: 70px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-reviews > a > div {
+    box-sizing: border-box;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
 }
 
 #like {
@@ -162,29 +221,13 @@ h1 {
     background: var(--background);
 }
 
-.container-user-reviews {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
+@media  screen and (max-width: 1154px) {
+    .container-game {
+        flex-direction: column;
+        padding: 0 0.5rem;
+    }
 
-.container-user-reviews > a {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    text-align: center;
-}
-
-.container-user-reviews > a > div {
-    box-sizing: border-box;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary);
+    .container-game > div > img {
+        width: 100%;
+    }
 }
