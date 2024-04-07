@@ -153,14 +153,6 @@ Para rodar em ambiente **local**, siga os passos:
   
     **Conclusão:** Pair programming fortaleceu nossa colaboração e confiança como equipe.
 
-- **_João Pedro Fontes e Antonio_**:
-    Realizamos pair programming para implementar a criação de uma nova review.
-  
-    **Resultado:** Após algumas tentativas iniciais de como poderiamos fazer isso, fazendo os modelos do banco de dados e fazendo alterações no html, conseguimos implementar com sucesso, retirando alguns bugs antes do commit como: 
-    - **Retorno JSON errado** após a criação da review;
-    Além disso, reslvemos algumas issues no github.
-
-    **Conclusão:** O pair programming serviu para aprendermos mais sobre a implementação das novas features do projeto Checkpoint, além do trabalho em equipe.
 
 - **_Larissa e João Pedro Maranhão_**: Realizamos o pair programming na tentativa de realizar a história da criação de uma wishlist.
 
@@ -169,3 +161,15 @@ Para rodar em ambiente **local**, siga os passos:
   
   **Conclusão:** O Pair Programming aumentou nossa determinação para continuar estudando e tentando, afim de colaborar com o grupo.
 
+- **_João Pedro Fontes e Antonio_**:
+    Realizamos pair programming para implementar a pesquisa por jogos na base de daos, curtir um jogo e fazer a criação de uma nova review para o jogo selecionado.
+  
+    **Resultado:** Após algumas pesquisas e tentativas iniciais de como poderiamos fazer essas novas features, fazendo os modelos do banco de dados e fazendo alterações no html, conseguimos implementar com sucesso essas histórias, retirando alguns bugs antes do commit como: 
+    - **Retorno JSON errado** após a criação da review;
+
+    Além disso, resolvemos algumas issues no github após a criação da historia de curtir um jogo e pesquisa por um jogo, sendo elas:
+    - **Bug ao curtir um jogo**: Era mostrado que o jogo não existia se fosse sua primeira ação de curtir um jogo.
+    - **Bug ao pesquisar um jogo**: Era mostrado os jogos que batiam exatamente com o que foi pesquisado, pesquisando, inclusive, se o caracter era maiúsculo ou minúsculo.
+    - **Bug no redirecionamento de rotas**: Bug que nao redirecionava para a página de login se o usuário não estivesse logado e tentasse acessar a rota privada.
+
+    **Conclusão:** O pair programming serviu para aprendermos mais sobre a implementação das novas features do projeto Checkpoint, além do trabalho em equipe.
