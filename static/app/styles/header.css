@@ -37,6 +37,7 @@ header {
 .search > button {
     width: 40px;
     height: 40px;
+    min-width: 40px;
     border: none;
     border-radius: 100%;
     background-color: var(--primary);

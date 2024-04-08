@@ -1,9 +1,9 @@
 # Plataforma de Review de Jogos
 ![image](https://github.com/lariisantos/Projeto-FDS/assets/142417937/f018c00d-9b12-4d22-a83e-7bba8b0d4c38)
 
-Esse projeto foi desenvolvido como parte da disciplina de Fundamentos de Desenvolvimento de Hardware. 
+Esse projeto foi desenvolvido como parte da disciplina de Fundamentos de Desenvolvimento de Software. 
 
-O "CheckPoint" tem como objetivo fornecer uma plataforma para que os usuários possam compartilhar, salvar, descobrir e escrever avaliações de jogos.
+O **CheckPoint** tem como objetivo fornecer uma plataforma para que os usuários possam compartilhar, salvar, descobrir e escrever avaliações de jogos.
 
 **Seu guia completo para avaliar e descobrir jogos!**
 
@@ -16,19 +16,23 @@ O "CheckPoint" tem como objetivo fornecer uma plataforma para que os usuários p
 
 ## Histórias:
 
-* Eu, como usuário típico, gostaria de editar meu perfil
-* Eu como usuário gostariar de avaliar (0-5 estrelas) os jogos disponíveis. 
-* Eu como usuário típico gostaria de favoritar jogos para que apareçam em meu perfil.
-* Eu como usuário típico gostaria de poder, ao visualizar a review de um usuário, poder comentar sobre sua review e o respectivo usuário poder visualizar os comentários na sua review.
-* Eu como usuário gostariar de fazer review (comentada)
-* Eu como usuário típico gostaria de selecionar jogos e colocar uma marcação de “na lista de desejos” ou “wishlist”, para demonstrar jogos que são desejados por mim, além de poder visualizar a wishlist de outros usuários.
-* Eu como usuário gostariar de apagar review  já criada 
-* Eu como usuário gostariar de editar review já criada 
-* Eu como usuário típico gostaria de pesquisar o nome de usuários, visualizar o respectivo perfil e seguir esta pessoa, a fim de poder acompanhar suas atividades recentes.
-* Eu como usuário típico gostaria de ver uma aba com reviews recentes de pessoas seguidas, além de poder ter o acesso a review.
-* Eu como usuário típico, gostaria de poder colocar 2 jogos com a marcação de “favorito” para que apareça na página do meu perfil.
-* Eu como usuário típico, eu gostaria de visualizar os jogos categorizados em “tendência”, os mais visualizados e jogados pelos usuários.
-* Eu, como usuário típico, gostaria de comentar em um perfil
+1. Eu, como usuário típico gostaria de editar meu perfil.
+2. Eu como usuário típico gostariar de avaliar (0-5 estrelas) os jogos disponíveis.
+3. Eu como usuário típico gostaria de favoritar jogos para que apareçam em meu perfil.
+4. Eu como usuário típico gostariar de fazer uma review (comentada).
+5. Eu como usuário típico gostariar de apagar uma review já criada.
+6. Eu como usuário típico gostariar de editar uma review já criada.
+7. Eu como usuário típico gostaria de poder visualizar a review de outro usuário.
+8. Eu como usuário típico gostaria de poder curtir a review de outro usuário.
+9. Eu como usuário típico gostaria de poder comentar a review de outro usuário.
+10. Eu como usuário típico gostaria de adicionar jogos a minha “lista de desejos” ou “wishlist”, para demonstrar meu interesse por aquele jogo.
+11. Eu como usuário típico gostaria de visualizar a wishlist de outros usuários.
+12. Eu como usuário típico gostaria de pesquisar por usuários.
+13. Eu como usuário típico gostaria visualizar o perfil de outros usuários.
+14. Eu como usuário típico gostaria de seguir outros usuários.
+15. Eu como usuário típico gostaria de ver uma aba com reviews recentes de pessoas seguidas.
+16. Eu como usuário típico gostaria de pesquisar por jogos específicos.
+17. Eu como usuário típico gostaria de curtir um jogo.
 
 ## Sobre:
 
@@ -143,13 +147,61 @@ Para rodar em ambiente **local**, siga os passos:
     python3 manage.py runserver
     ```
 
+## ENTREGAS
+## Entrega 1
+
+
+
+- [Link Screencast protótipo lo-fi](https://www.youtube.com/watch?v=2ysd68vxMM0)
+
+- Progresso no Jira
+![image](https://github.com/lariisantos/Checkpoint/assets/95260401/ae638d6a-6047-46fa-9e5b-50e84b9fc8e3)
+
+![image](https://github.com/lariisantos/Checkpoint/assets/95260401/cdecf9de-1608-45d8-a514-408709154997)
+
+
+
+
 ## Entrega 2:
 
+**Link do [ScreenCast](https://drive.google.com/file/d/15iqvXWf42R92JOHdvqo80P4fT0S81CXy/view?usp=sharing)**
+
 **Relato Programação em Par:**
-    - Clara e Heloísa:
-        Realizamos pair programming para implementar um novo recurso de avaliação de parâmetro 5 estrelas.
-        Resultado: A implementação, infelizmente, foi falha. Apesar das tentativas de ambas as participantes de implementar a história, acabamos criando mais bugs         e issues dentro do código e preferimos não realizar o commit para não atrapalhar o andamento do projeto como um todo, entretanto, a nossa relação como uma         equipe foi fortalecida, é como aquele velho ditado "Os erros são os degraus pelos quais subimos à sabedoria.".
-        Conclusão: Pair programming fortaleceu nossa colaboração e confiança como equipe.
-    - João Pedro Fontes e João Pedro Maranhão:
-    - Antônio e Larissa:
+- **_Clara e Heloísa_**:
+    Realizamos pair programming para implementar um novo recurso de avaliação de parâmetro 5 estrelas.
+  
+    **Resultado:** A implementação, infelizmente, foi falha. Apesar das tentativas de ambas as participantes de implementar a história, acabamos criando mais bugs e issues dentro do código e preferimos não             realizar o commit para não atrapalhar o andamento do projeto como um todo, entretanto, a nossa relação como uma equipe foi fortalecida, é como aquele velho ditado "Os erros são os degraus pelos quais             subimos à sabedoria.".
+  
+    **Conclusão:** Pair programming fortaleceu nossa colaboração e confiança como equipe.
+
+
+- **_Larissa e João Pedro Maranhão_**: Realizamos o pair programming na tentativa de realizar a história da criação de uma wishlist.
+
+  **Resultado:** Implementação falha. Depois de muita pesquisa e tentativas, deixamos a respectiva história de lado e, para ainda assim colaborarmos com a equipe, populamos nosso acervo de jogos para o nosso site, fizemos a logo da nossa plataforma e trabalhamos em conjunto
+  com Clara para fazer o diagrama de atividades.
+  
+  **Conclusão:** O Pair Programming aumentou nossa determinação para continuar estudando e tentando, afim de colaborar com o grupo.
+
+- **_João Pedro Fontes e Antonio Paulo Barros_**:
+    Realizamos pair programming para implementar a pesquisa por jogos na base de dados, curtir um jogo e fazer a criação de uma nova review para o jogo selecionado.
+  
+    **Resultado:** Após algumas pesquisas e tentativas iniciais de como poderiamos fazer essas novas features, fazendo os modelos do banco de dados e fazendo alterações no html, conseguimos implementar com sucesso essas histórias, retirando alguns bugs antes do commit como: 
+    - **Retorno JSON errado** após a criação da review;
+
+    Além disso, resolvemos algumas issues no github após a criação da historia de curtir um jogo e pesquisa por um jogo, sendo elas:
+    - **Bug ao curtir um jogo**: Era mostrado que o jogo não existia se fosse sua primeira ação de curtir um jogo.
+    - **Bug ao pesquisar um jogo**: Era mostrado os jogos que batiam exatamente com o que foi pesquisado, pesquisando, inclusive, se o caracter era maiúsculo ou minúsculo.
+    - **Bug no redirecionamento de rotas**: Bug que nao redirecionava para a página de login se o usuário não estivesse logado e tentasse acessar a rota privada.
+
+    **Conclusão:** O pair programming serviu para aprendermos mais sobre a implementação das novas features do projeto Checkpoint, além do trabalho em equipe.
+
+<br>
+
+**Print do quadro da sprint 1 no Jira:**
+
+![Sprint 1](https://github.com/apabsp/Checkpoint/assets/63313892/5769e078-b164-4a1e-9164-becbb4fe3281)
+
+![Backblog sprint 1](https://github.com/apabsp/Checkpoint/assets/63313892/a07fe2c3-6e66-445d-b537-5dc183d346e4)
+
+![Backlog](https://github.com/apabsp/Checkpoint/assets/63313892/79b42652-99a6-4441-9dea-453deb478423)
 
