@@ -148,8 +148,9 @@ Para rodar em ambiente **local**, siga os passos:
     ```
 
 ## ENTREGAS
+## Entrega 1
 
-Entrega 1
+
 
 - [Link Screencast protótipo lo-fi](https://www.youtube.com/watch?v=2ysd68vxMM0)
 
