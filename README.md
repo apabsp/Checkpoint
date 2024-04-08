@@ -149,6 +149,8 @@ Para rodar em ambiente **local**, siga os passos:
 
 ## Entrega 2:
 
+** ![ScreenCast](https://drive.google.com/file/d/15iqvXWf42R92JOHdvqo80P4fT0S81CXy/view?usp=sharing)**
+
 **Relato Programação em Par:**
 - **_Clara e Heloísa_**:
     Realizamos pair programming para implementar um novo recurso de avaliação de parâmetro 5 estrelas.
