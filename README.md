@@ -164,7 +164,7 @@ Para rodar em ambiente **local**, siga os passos:
 
 ## Entrega 2:
 
-**Link do [ScreenCast](https://drive.google.com/file/d/15iqvXWf42R92JOHdvqo80P4fT0S81CXy/view?usp=sharing)**
+**Link do [ScreenCast do Uso do Sistema]([https://drive.google.com/file/d/15iqvXWf42R92JOHdvqo80P4fT0S81CXy/view?usp=sharing](https://drive.google.com/file/d/11VyObqGrFGrhyWZqnYs42Mw1yIrpmdMp/view?usp=sharing))**
 
 **Relato Programação em Par:**
 - **_Clara e Heloísa_**:
