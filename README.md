@@ -204,4 +204,7 @@ Para rodar em ambiente **local**, siga os passos:
 ![Backblog sprint 1](https://github.com/apabsp/Checkpoint/assets/63313892/a07fe2c3-6e66-445d-b537-5dc183d346e4)
 
 ![Backlog](https://github.com/apabsp/Checkpoint/assets/63313892/79b42652-99a6-4441-9dea-453deb478423)
+<br>
 
+**Diagrama de Atividades**
+<img width="3288" alt="Diagrama(1)" src="https://github.com/apabsp/Checkpoint/assets/95260401/7066c146-769d-498e-916d-5ebafee02e83">
