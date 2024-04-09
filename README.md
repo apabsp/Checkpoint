@@ -216,5 +216,8 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 ![Diagrama Checkpoint drawio](https://github.com/apabsp/Checkpoint/assets/95260401/b8768940-9245-4a70-a67c-64106fd3d011)
 
+**Bug Tracker**
+![image](https://github.com/apabsp/Checkpoint/assets/95260401/c3502f1c-3a6f-45dc-a629-235193b4d468)
+
 
 
