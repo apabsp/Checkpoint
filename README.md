@@ -170,7 +170,7 @@ Acesso ao Site: https://checkpoint-fds.azurewebsites.net
 Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou registrar-se caso ainda não possua uma). Após concluir este processo, o usuário terá acesso aos serviços da Checkpoint.
 
 
-**Link do [ScreenCast do Uso do Sistema]([https://drive.google.com/file/d/15iqvXWf42R92JOHdvqo80P4fT0S81CXy/view?usp=sharing](https://drive.google.com/file/d/11VyObqGrFGrhyWZqnYs42Mw1yIrpmdMp/view?usp=sharing))**
+**Link do [ScreenCast do Uso do Sistema](https://drive.google.com/file/d/15iqvXWf42R92JOHdvqo80P4fT0S81CXy/view)**
 
 **Relato Programação em Par:**
 - **_Clara e Heloísa_**:
