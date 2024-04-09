@@ -164,6 +164,12 @@ Para rodar em ambiente **local**, siga os passos:
 
 ## Entrega 2:
 
+## Instrução de Acesso
+Acesso ao Site: https://checkpoint-fds.azurewebsites.net
+
+Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou registrar-se caso ainda não possua uma). Após concluir este processo, o usuário terá acesso aos serviços da Checkpoint.
+
+
 **Link do [ScreenCast do Uso do Sistema]([https://drive.google.com/file/d/15iqvXWf42R92JOHdvqo80P4fT0S81CXy/view?usp=sharing](https://drive.google.com/file/d/11VyObqGrFGrhyWZqnYs42Mw1yIrpmdMp/view?usp=sharing))**
 
 **Relato Programação em Par:**
@@ -207,4 +213,8 @@ Para rodar em ambiente **local**, siga os passos:
 <br>
 
 **Diagrama de Atividades**
-<img width="3288" alt="Diagrama(1)" src="https://github.com/apabsp/Checkpoint/assets/95260401/7066c146-769d-498e-916d-5ebafee02e83">
+
+![Diagrama Checkpoint drawio](https://github.com/apabsp/Checkpoint/assets/95260401/b8768940-9245-4a70-a67c-64106fd3d011)
+
+
+
