@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from . import models
 from .models import Game, Review
 from django.http import JsonResponse
+import json
 
 def getUser(req):
     user = User.objects.get(username=req.user)
@@ -45,16 +46,18 @@ class GameView(View):
             try:
                 game = Game.objects.get(pk=id)
                 likes = game.like_set.filter(liked=True)
+                rates = game.rating_set.filter(user=req.user)
                 review = game.review_set.filter(user=req.user)
 
                 allReviews = game.review_set.all().exclude(user=req.user)
 
                 context["allReviews"] = allReviews
 
+                context["rate"] = rates[0]
+
                 if(review.exists()):
                     context["review"] = review.first()
 
-                
                 context["game"] = game
 
                 try:
@@ -78,15 +81,39 @@ class GameView(View):
         return redirect("autenticacao:signin")
 
     def post(self, req, id):
+        typeAction = json.loads(req.body)["type"]
+
         if req.POST.get("action") == "submit_review":
             return self.criandoReview(req, id)
-        else:
-            return self.like_game(req, id)
-        #elif para colocar o avaliacaoDeEstrelas
-        #elif req.POST.get("action") == "rating":
-        #    return self.5stars(req,id)
+        
+        elif typeAction == "liking":
+            return self.likeGame(req, id)
+        
+        elif typeAction == "rating":
+            nota = json.loads(req.body)["nota"]
+            return self.rateGame(req, id, nota)
 
-    def like_game(self, req, id):
+    def rateGame(self, req, id, nota):
+        if req.user.is_authenticated:
+            try:
+                game = Game.objects.get(pk=id)
+                rates = game.rating_set.filter(user=req.user)
+
+                if not rates.exists():
+                    game.rating_set.create(user=req.user, nota=nota)
+                    game.save()
+                else:
+                    for rate in rates:
+                        rate.nota = nota
+                        rate.save()
+
+                return JsonResponse({"message": "Avaliou"})
+            except:
+                return JsonResponse({"message": "Jogo não existe"}, status=404)
+        else:
+            return JsonResponse({"message": "Você precisa estar logado"}, status=400)
+
+    def likeGame(self, req, id):
         if req.user.is_authenticated:
             try:
                 game = Game.objects.get(pk=id)
@@ -141,7 +168,7 @@ class ReviewView(View):
             try:
                 review = Review.objects.get(pk=id)
                 game = review.game
-                print(game);
+                print(game)
 
                 context["game"] = game
                 context["review"] = review

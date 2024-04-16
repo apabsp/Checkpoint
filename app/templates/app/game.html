@@ -17,34 +17,25 @@
                     <svg class="{{ liked }}" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
                     {{ likes }}
                 </button>
+
                 <div>
-                    <button id = "5stars"></button>
+                    <div class="rating">
+                        <input type="radio" id="star0" name="rating"  value="0" /><label for="star0" title="0 stars">0</label>
+                        <input type="radio" id="star1" name="rating"  value="1" /><label for="star1" title="1 star">1</label>
+                        <input type="radio" id="star2" name="rating"  value="2" /><label for="star2" title="2 stars">2</label>
+                        <input type="radio" id="star3" name="rating"  value="3" /><label for="star3" title="3 stars">3</label>
+                        <input type="radio" id="star4" name="rating"  value="4" /><label for="star4" title="4 stars">4</label>
+                        <input type="radio" id="star5" name="rating"  value="5" /><label for="star5" title="5 stars">5</label>
+                    </div>
                 </div>
+
             </div>
 
             <!-- "melhor" jeito é criar 10 botões e, dependendo do hover, demonstrar as estrelas acessas -->
-            achei uma alternativa
-
-            <form action="{% url 'nome_da_sua_view' %}" method="post">
-                {% csrf_token %}
-                <div class="rating">
-                  <!-- Inputs e labels como mencionado anteriormente -->
-                  <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 stars"></label>
-                  <input type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="4.5 stars"></label>
-                  <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars"></label>
-                  <input type="radio" id="star3half" name="rating" value="3.5" /><label class="half" for="star3half" title="3.5 stars"></label>
-                  <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars"></label>
-                  <input type="radio" id="star2half" name="rating" value="2.5" /><label class="half" for="star2half" title="2.5 stars"></label>
-                  <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars"></label>
-                  <input type="radio" id="star1half" name="rating" value="1.5" /><label class="half" for="star1half" title="1.5 stars"></label>
-                  <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star"></label>
-                  <input type="radio" id="starhalf" name="rating" value="0.5" /><label class="half" for="starhalf" title="0.5 stars"></label>
-                </div>
-                <button type="submit">Enviar Avaliação</button>
-            </form>
-              
+            <!-- achei uma alternativa -->
 
         </div>
+        
         <div class="container-data">
             <h1>{{ game.name }}</h1>
 
@@ -114,7 +105,11 @@
         document.getElementById("like").addEventListener("click", async () => {
             const res = await fetch("/app/game/{{game.id}}/", {
                 method: "POST",
+                body: JSON.stringify({
+                    type: "liking"
+                }),
                 headers: {
+                    "Content-Type": "Application/json",
                     "X-CSRFToken": getCSRFToken()
                 }
             })
@@ -132,7 +127,37 @@
             modal.classList.toggle("active");
         }
 
-        document.getElementById("addReview").addEventListener("click", toggleModal)
-        document.getElementById("closeModal").addEventListener("click", toggleModal)
+        document.getElementById("addReview").addEventListener("click", toggleModal);
+        document.getElementById("closeModal").addEventListener("click", toggleModal);
+        const ratings = document.querySelectorAll('[name="rating"]');
+
+        ratings.forEach(current => {
+            if(parseInt(current.value) === parseInt("{{rate.nota}}")) {
+                current.checked = true;
+            }
+        })
+
+        ratings.forEach(current => {
+            current.addEventListener("click", async () => {
+                const res = await fetch("/app/game/{{game.id}}/", {
+                    method: "POST",
+                    body: JSON.stringify({
+                        type: "rating",
+                        nota: parseFloat(current.value)
+                    }),
+                    headers: {
+                        "Content-Type": "Application/json",
+                        "X-CSRFToken": getCSRFToken()
+                    }
+                })
+                const data = await res.json();
+                
+                alert(data.message.concat(" {{ game.name }}"));
+
+                if(res.ok) {
+                    window.location.reload();
+                }
+            })
+        });
     </script>
 {% endblock %}
