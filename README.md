@@ -164,7 +164,13 @@ Para rodar em ambiente **local**, siga os passos:
 
 ## Entrega 2:
 
-**Link do [ScreenCast](https://drive.google.com/file/d/15iqvXWf42R92JOHdvqo80P4fT0S81CXy/view?usp=sharing)**
+## Instrução de Acesso
+Acesso ao Site: https://checkpoint-fds.azurewebsites.net
+
+Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou registrar-se caso ainda não possua uma). Após concluir este processo, o usuário terá acesso aos serviços da Checkpoint.
+
+
+**Link do [ScreenCast do Uso do Sistema](https://drive.google.com/file/d/15iqvXWf42R92JOHdvqo80P4fT0S81CXy/view)**
 
 **Relato Programação em Par:**
 - **_Clara e Heloísa_**:
@@ -204,4 +210,17 @@ Para rodar em ambiente **local**, siga os passos:
 ![Backblog sprint 1](https://github.com/apabsp/Checkpoint/assets/63313892/a07fe2c3-6e66-445d-b537-5dc183d346e4)
 
 ![Backlog](https://github.com/apabsp/Checkpoint/assets/63313892/79b42652-99a6-4441-9dea-453deb478423)
+<br>
+
+**Diagrama de Atividades**
+
+![Diagrama Checkpoint drawio(1)](https://github.com/apabsp/Checkpoint/assets/95260401/c34d36db-5808-4531-9385-8856232e87f5)
+
+
+**Bug Tracker**
+![image](https://github.com/apabsp/Checkpoint/assets/130470569/2ede31f6-b9f6-401f-9891-64e581a55d8e)
+![image](https://github.com/apabsp/Checkpoint/assets/130470569/765ffa31-1365-4128-a64a-5c93c198a5b2)
+
+
+
 
