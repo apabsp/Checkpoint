@@ -127,8 +127,8 @@
             modal.classList.toggle("active");
         }
 
-        document.getElementById("addReview").addEventListener("click", toggleModal);
-        document.getElementById("closeModal").addEventListener("click", toggleModal);
+        document.getElementById("addReview")?.addEventListener("click", toggleModal);
+        document.getElementById("closeModal")?.addEventListener("click", toggleModal);
         const ratings = document.querySelectorAll('[name="rating"]');
 
         ratings.forEach(current => {

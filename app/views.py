@@ -53,11 +53,12 @@ class GameView(View):
 
                 context["allReviews"] = allReviews
 
-                context["rate"] = rates[0]
+                if(rates.exists()):
+                    context["rate"] = rates[0]
 
                 if(review.exists()):
                     context["review"] = review.first()
-
+                
                 context["game"] = game
 
                 try:
