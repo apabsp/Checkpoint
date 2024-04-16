@@ -7,6 +7,7 @@ class Game(models.Model):
     image = models.CharField(max_length=200, default=False)
     platforms = models.JSONField(default=dict)
     screenshots = models.JSONField(default=dict)
+    
 
     def __str__(self) -> str:
         return self.name

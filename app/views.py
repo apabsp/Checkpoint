@@ -82,6 +82,9 @@ class GameView(View):
             return self.criandoReview(req, id)
         else:
             return self.like_game(req, id)
+        #elif para colocar o avaliacaoDeEstrelas
+        #elif req.POST.get("action") == "rating":
+        #    return self.5stars(req,id)
 
     def like_game(self, req, id):
         if req.user.is_authenticated:
