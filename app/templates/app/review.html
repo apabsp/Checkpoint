@@ -19,6 +19,14 @@
                 {{review.text}}
             </div> 
         </div>
+        {% if user.username == reviewCreator.username %}
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="review_id" value="{{ review_id }}">
+                <button type="submit">DELETE REVIEW</button>
+            </form>
+
+        {% endif %}
     </div>
 
 {% endblock %}

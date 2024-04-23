@@ -73,6 +73,9 @@
                 <div class="review">
                     {{ review.text }}
                 </div>
+                <a href="/app/review/{{review.id}}">
+                    <button style="color:black">Visualizar minha review</button>
+                </a>
             {% else %}
                 <div class="">
                     <button id="addReview">Adicionar Review</button>
