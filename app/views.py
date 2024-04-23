@@ -82,12 +82,13 @@ class GameView(View):
         return redirect("autenticacao:signin")
 
     def post(self, req, id):
-        typeAction = json.loads(req.body)["type"]
 
         if req.POST.get("action") == "submit_review":
             return self.criandoReview(req, id)
         
-        elif typeAction == "liking":
+        typeAction = json.loads(req.body)["type"]
+        
+        if typeAction == "liking":
             return self.likeGame(req, id)
         
         elif typeAction == "rating":
@@ -137,6 +138,7 @@ class GameView(View):
             return JsonResponse({"message": "Você precisa estar logado"}, status=400)
 
     def criandoReview(self, req, id):
+        print("oi")
         if req.user.is_authenticated:
             try:
                 game = Game.objects.get(pk=id)
