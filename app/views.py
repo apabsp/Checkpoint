@@ -172,12 +172,10 @@ class ReviewView(View):
                 review = Review.objects.get(pk=id)
                 game = review.game
                 reviewCreator = review.user
-                print(game)
 
                 context["game"] = game
                 context["review"] = review
                 context["reviewCreator"] = reviewCreator
-                print("\n", context)
 
                 return render(req, "app/review.html", context)
             except:
@@ -189,8 +187,10 @@ class ReviewView(View):
             try:
                 toDelete = Review.objects.get(pk=id)
                 toDelete.delete()
-                JsonResponse("Review deletada!")
-            except:
-                JsonResponse("Algo de errado aconteceu!")
+                
+                return redirect("app:game", id=toDelete.game.id)
+            except Exception as e:
+                print(e)
+                return redirect("app:root")
 
         return redirect("app:root")

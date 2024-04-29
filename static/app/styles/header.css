@@ -17,6 +17,15 @@ header {
     height: 50px;
 }
 
+.forms-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
 .search {
     height: 40px;
     flex: 1 1 0%;
@@ -49,6 +58,21 @@ header {
     background-color: var(--secondary);
 }
 
+.list-games {
+    background-color: var(--primary);
+    text-decoration: none;
+    font-family: "Poppins";
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.75rem;
+    border: none;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+
+.list-games:hover {
+    background-color: var(--secondary);
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -65,8 +89,8 @@ header {
     justify-content: center;
     background-color: var(--primary);
     border-radius: 100%;
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
 }
 
 .logo {
@@ -79,5 +103,6 @@ header {
 
 .logo > img {
     width: 70%;
+    min-width: 40px;
     object-fit: cover;
 }
