@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib.auth.models import User
-from . import models
+from django.contrib import messages
+from django.contrib.messages import constants
 from .models import Game, Review
 from django.http import JsonResponse
 import json
@@ -138,7 +139,6 @@ class GameView(View):
             return JsonResponse({"message": "Você precisa estar logado"}, status=400)
 
     def criandoReview(self, req, id):
-        print("oi")
         if req.user.is_authenticated:
             try:
                 game = Game.objects.get(pk=id)
@@ -182,15 +182,42 @@ class ReviewView(View):
                 return redirect("app:root")
             
         return redirect("app:root")
+    
+
     def post(self, req, id):
         if req.user.is_authenticated:
-            try:
-                toDelete = Review.objects.get(pk=id)
-                toDelete.delete()
-                
-                return redirect("app:game", id=toDelete.game.id)
-            except Exception as e:
-                print(e)
-                return redirect("app:root")
+
+            action = req.POST.get("action")
+
+            if action == "delete":
+                return self.delete_post(id=id)
+            elif action == "edit":
+                return self.edit_post(req=req, id=id)
 
         return redirect("app:root")
+    
+
+    def edit_post(self, req, id):
+        try:
+            toEdit = Review.objects.get(pk=id)
+            toEdit.text = req.POST.get("review-text")
+            toEdit.save()
+
+            messages.add_message(req, constants.SUCCESS, "Review alterado com sucesso!")
+            
+            return redirect("app:review", id=id)
+        except Exception as e:
+            print(e)
+            return redirect("app:root")
+
+
+    def delete_post(self, id):
+        try:
+            toDelete = Review.objects.get(pk=id)
+            toDelete.delete()
+            
+            return redirect("app:game", id=toDelete.game.id)
+        except Exception as e:
+            print(e)
+            return redirect("app:root")
+        

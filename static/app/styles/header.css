@@ -38,7 +38,8 @@ header {
     width: 100%;
     border: none;
     padding: 0.6rem 1rem;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: "Poppins";
     border-radius: 1rem;
     background-color: var(--primary);
 }
