@@ -7,6 +7,7 @@
 
     --red-300: #fca5a5;
     --red-600: #dc2626;
+
 }
 
 h1 {
@@ -45,11 +46,17 @@ h1 {
     align-items: center;
 }
 
-.review > p {
+.review-content {
+    width: 100%;
+}
+
+#review-text {
     width: 100%;
     background-color: var(--primary);
+    font-family: "Poppins";
     border-radius: 1rem;
     padding: 1rem 1.5rem;
+    border: none;
 }
 
 #delete-review {
@@ -59,8 +66,27 @@ h1 {
     cursor: pointer;
     background-color: var(--red-300);
     border-radius: 0.5rem;
+    transition: all 150ms ease-in-out;
+}
+
+#edit-review {
+    border: none;
+    background: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    transition: all 150ms ease-in-out;
+}
+
+#delete-review:hover, #edit-review:hover {
+    opacity: 75%;
 }
 
 #delete-review > svg {
     stroke: var(--red-600);
+}
+
+#edit-review > svg {
+    stroke: white;
 }

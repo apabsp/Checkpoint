@@ -1,0 +1,42 @@
+:root {
+    --background: #181818;
+    --background2: #252525;
+    --primary: #424242;
+    --secondary: #929292;
+    --zinc: #E0E0E0;
+
+    --green-300: #6ee7b7;
+    --green-600: #059669;
+}
+
+@keyframes toastify {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-27rem);
+    }
+    50% {
+      transform: translateX(-27rem);
+    }
+    75% {
+      transform: translateX(25rem);
+    }
+}
+
+.toast {
+    position: absolute;
+    background: var(--green-300);
+    padding: 1rem 3rem;
+    right: 0rem;
+    border-radius: 1rem;
+    right: -25rem;
+    bottom: 2rem;
+    animation: toastify 4s ease-in-out 1;
+}
+
+.toast > p {
+    color: var(--green-600);
+    font-size: 1rem;
+    font-weight: 600;
+}
