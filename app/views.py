@@ -167,17 +167,30 @@ class ReviewView(View):
     def get(self, req, id):
         if(req.user.is_authenticated):
             context = getUser(req)
-
+            
             try:
                 review = Review.objects.get(pk=id)
                 game = review.game
-                print(game)
+                reviewCreator = review.user
 
                 context["game"] = game
                 context["review"] = review
+                context["reviewCreator"] = reviewCreator
 
                 return render(req, "app/review.html", context)
             except:
                 return redirect("app:root")
             
+        return redirect("app:root")
+    def post(self, req, id):
+        if req.user.is_authenticated:
+            try:
+                toDelete = Review.objects.get(pk=id)
+                toDelete.delete()
+                
+                return redirect("app:game", id=toDelete.game.id)
+            except Exception as e:
+                print(e)
+                return redirect("app:root")
+
         return redirect("app:root")
