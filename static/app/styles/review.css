@@ -90,3 +90,29 @@ h1 {
 #edit-review > svg {
     stroke: white;
 }
+
+@media  screen and (max-width: 1154px) {
+    .container-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .container-review {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .container-review > h1 {
+        text-align: center;
+    }
+    
+    .review {
+        width: 100%;
+    }
+
+    .container-game > div > img {
+        width: 100%;
+    }
+}
