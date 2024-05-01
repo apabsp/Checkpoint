@@ -9,6 +9,7 @@ html {
 
 body{
     background-color: var(--background);
+    overflow-x: hidden;
     color: var(--zinc);
     margin: 0;
     box-sizing: border-box;
