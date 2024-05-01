@@ -11,7 +11,7 @@
     <div class="container-games">
         {% for game in games %}
             <div class="game">
-                <a href="{% url 'app:game' id=game.id %}">
+                <a class="game-image" href="{% url 'app:game' id=game.id %}">
                     <img src="{{ game.image }}" alt="game name" width="150" height="200">
                 </a>
                 <div>
