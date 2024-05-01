@@ -1,4 +1,5 @@
 :root {
+    --background: #252525;
     --primary: #424242;
     --secondary: #929292;
     --zinc: #E0E0E0;
@@ -183,7 +184,7 @@ header {
         justify-content: end;
         width: 100%;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.8);
         pointer-events: none;
         transition: all 300ms ease-in-out;
     }
@@ -196,8 +197,7 @@ header {
         flex: 1 1 0%;
         max-width: 375px;
         padding: 2rem;
-        background: #42424281;
-        backdrop-filter: blur(10px);
+        background: var(--background);
         transform: translateX(400px);
         transition: all 300ms ease-in-out;
     }
