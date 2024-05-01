@@ -69,7 +69,7 @@
         const editButton = document.getElementById("edit-review");
         const reviewContent = document.getElementById("review-text");
 
-        editButton.addEventListener("click", () => {
+        editButton?.addEventListener("click", () => {
             reviewContent.disabled = false;
             reviewContent.focus();
             reviewContent.select();

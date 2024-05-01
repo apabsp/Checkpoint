@@ -85,7 +85,7 @@
                 <h2 class="review-title">Review dos usuários</h2>
                 <div class="user-reviews">
                     {% for userReview in allReviews %}
-                        <a href="{% url 'app:review' id=userReview.id %}">
+                        <a class="user-review-link" href="{% url 'app:review' id=userReview.id %}">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                             </div>
@@ -146,7 +146,7 @@
             })
             const data = await res.json();
             
-            alert(data.message.concat(" {{ game.name }}"));
+            //alert(data.message.concat(" {{ game.name }}"));
 
             if(res.ok) {
                 window.location.reload();
@@ -178,7 +178,7 @@
                 });
                 const data = await res.json();
                 
-                alert(data.message.concat(" {{ game.name }}"));
+                //alert(data.message.concat(" {{ game.name }}"));
 
                 if(res.ok) {
                     window.location.reload();
