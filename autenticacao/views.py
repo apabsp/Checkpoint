@@ -3,6 +3,7 @@ from django.views import View
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.messages import constants
+from django.contrib.auth import logout
 from django.contrib import auth
 
 # Create your views here.
@@ -59,3 +60,8 @@ class SigninView(View):
         else:
             auth.login(req, USER)
             return redirect('/app')
+        
+
+def logoutFunction(req):
+    logout(req)
+    return redirect("autenticacao:signin")

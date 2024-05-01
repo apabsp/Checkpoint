@@ -44,3 +44,24 @@ a {
     object-fit: cover;
     border-radius: 1rem;
 }
+
+@media screen and (max-width: 840px) {
+    .container-games {
+        min-width: auto;
+    }
+
+    .game {
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 510px) {
+    .game-image {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+}

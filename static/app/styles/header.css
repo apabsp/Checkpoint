@@ -2,6 +2,9 @@
     --primary: #424242;
     --secondary: #929292;
     --zinc: #E0E0E0;
+
+    --red-300: #fca5a5;
+    --red-600: #dc2626;
 }
 
 * {
@@ -27,7 +30,7 @@ header {
 }
 
 .search {
-    height: 40px;
+    max-height: 40px;
     flex: 1 1 0%;
     display: flex;
     align-items: center;
@@ -45,6 +48,9 @@ header {
 }
 
 .search > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     min-width: 40px;
@@ -106,4 +112,118 @@ header {
     width: 70%;
     min-width: 40px;
     object-fit: cover;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.toggle-menu {
+    display: none;
+}
+
+.side-menu {
+    display: none;
+}
+
+.profile-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    min-height: 38px;
+    border-radius: 100%;
+    background-color: var(--red-300);
+}
+
+.logout > svg {
+    stroke: var(--red-600);
+}
+
+@media screen and (max-width: 840px) {
+    .forms-container, .container, .config, .logout {
+        display: none;
+    }
+
+    .config.in-menu, .logout.in-menu {
+        display: flex;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .toggle-menu {
+        max-width: fit-content;
+        cursor: pointer;
+        display: flex;
+        padding: 0.3rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        background: none;
+        border: 2px solid var(--zinc);
+        transition: all 150ms ease-in-out;
+    }
+
+    .side-menu {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        pointer-events: none;
+        transition: all 300ms ease-in-out;
+    }
+
+    .side-menu > aside {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        flex: 1 1 0%;
+        max-width: 375px;
+        padding: 2rem;
+        background: #42424281;
+        backdrop-filter: blur(10px);
+        transform: translateX(400px);
+        transition: all 300ms ease-in-out;
+    }
+
+    aside.active {
+        transform: translateX(0px);
+    }
+
+    .side-menu.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+.left-auto {
+    margin-left: auto;
+}
+
+.top-auto {
+    margin-top: auto;
+}
+
+.no-border {
+    border: none;
+}
+
+.max-fit {
+    max-width: fit-content;
 }
