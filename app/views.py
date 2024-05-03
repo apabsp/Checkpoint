@@ -220,4 +220,3 @@ class ReviewView(View):
         except Exception as e:
             print(e)
             return redirect("app:root")
-        
