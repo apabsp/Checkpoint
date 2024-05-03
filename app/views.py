@@ -190,7 +190,7 @@ class ReviewView(View):
             action = req.POST.get("action")
 
             if action == "delete":
-                return self.delete_post(id=id)
+                return self.delete_post(req=req, id=id)
             elif action == "edit":
                 return self.edit_post(req=req, id=id)
 
@@ -203,7 +203,7 @@ class ReviewView(View):
             toEdit.text = req.POST.get("review-text")
             toEdit.save()
 
-            messages.add_message(req, constants.SUCCESS, "Review alterado com sucesso!")
+            messages.add_message(req, constants.SUCCESS, "Review alterada com sucesso!")
             
             return redirect("app:review", id=id)
         except Exception as e:
@@ -211,11 +211,13 @@ class ReviewView(View):
             return redirect("app:root")
 
 
-    def delete_post(self, id):
+    def delete_post(self, req, id):
         try:
             toDelete = Review.objects.get(pk=id)
             toDelete.delete()
             
+            messages.add_message(req, constants.SUCCESS, "Review deletada com sucesso!")
+
             return redirect("app:game", id=toDelete.game.id)
         except Exception as e:
             print(e)
