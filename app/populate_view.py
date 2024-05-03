@@ -1,6 +1,6 @@
 import json
 from app.models import Game
-from django.shortcuts import redirect
+from django.http import JsonResponse
 
 # A string containing JSON data
 
@@ -613,4 +613,4 @@ def populate(req):
 
             print(gamedb)
 
-    return redirect("app:root")
+    return JsonResponse({"message": "Populated"})
