@@ -5,7 +5,7 @@ from django.http import JsonResponse
 
 # A string containing JSON data
 
-json_string = """[
+json_string = '''[
     {
         "name": "Stardew Valley",
         "image": "https://image.api.playstation.com/cdn/UP2456/CUSA06840_00/0WuZecPtRr7aEsQPv2nJqiPa2ZvDOpYm.png",
@@ -592,7 +592,7 @@ json_string = """[
             "https://media.rawg.io/media/screenshots/4ee/4ee5c3c8b850ab4ba8e04b9f5d5ab060.jpg"
         ]
     }
-]"""
+]'''
 
 
 def populate(req):
