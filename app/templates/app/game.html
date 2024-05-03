@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{% static 'root/styles/style.css' %}">
     <link rel="stylesheet" href="{% static 'app/styles/app.css' %}">
     <link rel="stylesheet" href="{% static 'app/styles/game.css' %}">
+    <link rel="stylesheet" href="{% static 'root/styles/toast.css' %}">
 {% endblock %}
 
 {% block body %}
@@ -113,6 +114,14 @@
             </form>
         </div>
     </div>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="toast">
+                <p>{{message}}</p>
+            </div>
+        {% endfor %}
+    {% endif %}
 
 {% endblock %}
 
