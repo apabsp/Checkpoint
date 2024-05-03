@@ -42,7 +42,7 @@ O **CheckPoint** tem como objetivo fornecer uma plataforma para que os usuários
 
 Criar um sistema de review de jogos que seja útil, engajador e inovador.
 
-## Membros da Equipe
+<!-- ## Membros da Equipe
 
 Este projeto foi desenvolvido por:
 
@@ -51,7 +51,7 @@ Este projeto foi desenvolvido por:
     João Pedro Fontes Ferreira
     João Pedro Maranhão
     Larissa Sobrinho
-    Heloísa Tanaka
+    Heloísa Tanaka -->
     
 ## Processo: 
 
@@ -148,9 +148,11 @@ Para rodar em ambiente **local**, siga os passos:
     ```
 
 ## ENTREGAS
-## Entrega 1
 
+<details>
+<summary>Entrega 1:</summary>
 
+## Entrega 1:
 
 - [Link Screencast protótipo lo-fi](https://www.youtube.com/watch?v=2ysd68vxMM0)
 
@@ -158,9 +160,11 @@ Para rodar em ambiente **local**, siga os passos:
 ![image](https://github.com/lariisantos/Checkpoint/assets/95260401/ae638d6a-6047-46fa-9e5b-50e84b9fc8e3)
 
 ![image](https://github.com/lariisantos/Checkpoint/assets/95260401/cdecf9de-1608-45d8-a514-408709154997)
+</details>
 
 
-
+<details>
+<summary>Entrega 2:</summary>
 
 ## Entrega 2:
 
@@ -220,7 +224,42 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 **Bug Tracker**
 ![image](https://github.com/apabsp/Checkpoint/assets/130470569/2ede31f6-b9f6-401f-9891-64e581a55d8e)
 ![image](https://github.com/apabsp/Checkpoint/assets/130470569/765ffa31-1365-4128-a64a-5c93c198a5b2)
+</details>
 
+<details>
+<summary>Entrega 3:</summary>
 
+## Entrega 3:
 
+**Diagrama de Atividades**
 
+![Diagrama Checkpoint drawio](https://github.com/apabsp/Checkpoint/assets/133816986/1bb3d519-efea-4544-a8d4-105d8b26bfa7)
+</details>
+
+<br>
+
+## Contribuidores 👨‍👩‍👧‍👦
+<ul>
+    <li>
+        <a href="https://github.com/apabsp">Antonio Paulo Barros</a> - apabsp@cesar.school 📩
+    </li>
+    <li>
+        <a href="https://github.com/helotanaka">Heloisa Tanaka</a> - htf@cesar.school 📩
+    </li>
+    <li>
+        <a href="https://github.com/jotapeans">João Pedro Fontes</a> - jpff2@cesar.school 📩
+    </li>
+    <li>
+        <a href="https://github.com/lariisantos">Larissa Santos</a> - lss2@cesar.school 📩
+    </li>
+    <li>
+        <a href="https://github.com/claramachadoaj">Clara Machado</a> - cma3@cesar.school 📩
+    </li>
+    <li>
+        <a href="https://github.com/Jpmaranhao">João Pedro Maranhão</a> - jpmcf@cesar.school 📩
+    </li>
+</ul>
+
+## License
+
+[MIT](./LICENSE)
