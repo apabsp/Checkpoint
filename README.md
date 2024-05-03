@@ -256,10 +256,10 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
         <a href="https://github.com/claramachadoaj">Clara Machado</a> - cma3@cesar.school 📩
     </li>
     <li>
-        <a href="https://github.com/claramachadoaj">João Pedro Maranhão</a> - cma3@cesar.school 📩
+        <a href="https://github.com/Jpmaranhao">João Pedro Maranhão</a> - jpmcf@cesar.school 📩
     </li>
 </ul>
 
 ## License
 
-[MIT](https://github.com/apabsp/Checkpoint/blob/master/LICENSE.md)
+[MIT](./LICENSE)
