@@ -222,5 +222,10 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 ![image](https://github.com/apabsp/Checkpoint/assets/130470569/765ffa31-1365-4128-a64a-5c93c198a5b2)
 
 
+## Entrega 3:
+
+**Diagrama de Atividades**
+
+![Diagrama Checkpoint drawio](https://github.com/apabsp/Checkpoint/assets/133816986/1bb3d519-efea-4544-a8d4-105d8b26bfa7)
 
 
