@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from . import populate_view
 
 app_name = 'app'
 
@@ -8,5 +9,6 @@ urlpatterns = [
     path('search/', views.SearchView.as_view(), name='search'),
     path('game/<int:id>/', views.GameView.as_view(), name='game'),
     path('review/<int:id>/', views.ReviewView.as_view(), name='review'),
+    path('populate/', populate_view.populate, name='populate'),
     ##path('game/<int:id>/submit_review/', views.paraCriarReview.as_view(), name='submit_review'),
 ]
