@@ -5,3 +5,5 @@ db.sqlite3
 transformGamesJson.js
 
 __pycache__
+
+/node_modules

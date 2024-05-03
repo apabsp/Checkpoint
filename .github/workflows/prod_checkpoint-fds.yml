@@ -30,12 +30,29 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          pip install -r requirements.txt
+          npm ci
+
+    
+      - name: Run local server
+        run: |
+          python manage.py migrate
+          python manage.py runserver &
+          sleep 5
+          npx cypress run
+
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       - name: Cleaning testing files
         run: |
           rm .env
+          rm db.sqlite3
+          rm cypress.config.js
+          rm package-lock.json
+          rm package.json
+          rm -rf cypress
+          rm -rf node_modules
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -80,4 +97,3 @@ jobs:
         with:
           app-name: 'checkpoint-fds'
           slot-name: 'Production'
-          
