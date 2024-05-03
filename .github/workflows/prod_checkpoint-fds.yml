@@ -34,8 +34,7 @@ jobs:
           pip install -r requirements.txt
           npm ci
 
-    
-      - name: Run local server
+      - name: Run tests
         run: |
           python manage.py migrate
           python manage.py runserver &
@@ -44,8 +43,7 @@ jobs:
           sleep 10
           npx cypress run
 
-        
-      # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
+
       - name: Cleaning testing files
         run: |
           rm .env
