@@ -233,6 +233,14 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 **link do [Screencast do build e deploy com os testes](https://drive.google.com/file/d/18qB9hdLpaBI_lFlOlaB3Zm7JEf0Q-Ni5/view)**
 
+
+**Link do [Screencast do Sistema](https://drive.google.com/file/d/1g7MePDxJtaA5RkR7Sp5ZHjIKzh6Ctxd1/view?usp=sharing)**
+
+
+**Link do [Screencast dos testes](https://drive.google.com/file/d/1_FSLtyZh1p8cmYHwtVNLTW8CJ3pCGT_y/view?usp=sharing)**
+
+
+
 **Diagrama de Atividades**
 
 ![Diagrama Checkpoint drawio](https://github.com/apabsp/Checkpoint/assets/133816986/1bb3d519-efea-4544-a8d4-105d8b26bfa7)
