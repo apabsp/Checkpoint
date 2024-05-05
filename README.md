@@ -249,7 +249,7 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 **Bug Tracker**
 ![image](![Captura de tela 2024-05-05 201220](https://github.com/apabsp/Checkpoint/assets/142419152/9ff6591b-070e-46c7-a474-eb1247ab01d5))
 ![image](![Captura de tela 2024-05-05 200951](https://github.com/apabsp/Checkpoint/assets/142419152/ead8f341-da71-40d1-ac9c-6fe6e490def7))
-</details>
+
 
 **Atualização do Lo-fi**
 ![Página do Jogo](https://github.com/apabsp/Checkpoint/assets/130470569/89b1fca5-d22a-4bd0-978e-7767f0185e13)
