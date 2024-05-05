@@ -247,7 +247,7 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 
 **Bug Tracker**
-![image](![image](https://github.com/apabsp/Checkpoint/assets/142419152/0bf6315c-7f52-4f1e-87ab-0760ea68a0f8))
+![image](![Captura de tela 2024-05-05 201220](https://github.com/apabsp/Checkpoint/assets/142419152/9ff6591b-070e-46c7-a474-eb1247ab01d5))
 ![image](![Captura de tela 2024-05-05 200951](https://github.com/apabsp/Checkpoint/assets/142419152/ead8f341-da71-40d1-ac9c-6fe6e490def7))
 </details>
 
