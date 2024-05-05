@@ -236,6 +236,15 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 **Diagrama de Atividades**
 
 ![Diagrama Checkpoint drawio](https://github.com/apabsp/Checkpoint/assets/133816986/1bb3d519-efea-4544-a8d4-105d8b26bfa7)
+
+**Atualização do Lo-fi**
+![Página do Jogo](https://github.com/apabsp/Checkpoint/assets/130470569/89b1fca5-d22a-4bd0-978e-7767f0185e13)
+![Criar Review](https://github.com/apabsp/Checkpoint/assets/130470569/d9b17a4c-c506-41f0-b7bc-4c795b2def2b)
+![Review Postada](https://github.com/apabsp/Checkpoint/assets/130470569/373d49d7-06b7-4d3f-b6be-a7bd385d621c)
+![Editar Review](https://github.com/apabsp/Checkpoint/assets/130470569/5d537448-a8a7-4226-ab62-419a879f6aa4)
+![Visualizar Review](https://github.com/apabsp/Checkpoint/assets/130470569/5d8c3544-9d40-48a4-b948-80120194a955)
+![Comentar Review](https://github.com/apabsp/Checkpoint/assets/130470569/dc95710d-d55c-4288-af80-4a0a8aae0444)
+
 </details>
 
 <br>
