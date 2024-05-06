@@ -294,21 +294,22 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <details>
 <summary>Relatos de Pair Programming</summary>
 <br/>
-Antonio e Heloísa: Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de deletar uma review, realizar melhorias no front-end e implementar testes utilizando Cypress. 
+    
+**Antonio e Heloísa**: Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de deletar uma review, realizar melhorias no front-end e implementar testes utilizando Cypress. 
 
-Resultado: O desenvolvimento da funcionalidade de deletar reviews foi particularmente ágil, graças ao domínio de Django por ambos. Já as melhorias no front-end foram alcançadas com sucesso, após uma investigação detalhada e algumas iterações de design e usabilidade. Quanto aos testes em Cypress, após de pesquisa para melhor compreensão da ferramenta, conseguimos implementar os testes automatizados.
+**Resultado**: O desenvolvimento da funcionalidade de deletar reviews foi particularmente ágil, graças ao domínio de Django por ambos. Já as melhorias no front-end foram alcançadas com sucesso, após uma investigação detalhada e algumas iterações de design e usabilidade. Quanto aos testes em Cypress, após de pesquisa para melhor compreensão da ferramenta, conseguimos implementar os testes automatizados.
 
-Conclusão: O pair programming serviu para aprendermos mais sobre Front-End em geral e sobre a ferramenta Cypress, além do trabalho em equipe.
+**Conclusão**: O pair programming serviu para aprendermos mais sobre Front-End em geral e sobre a ferramenta Cypress, além do trabalho em equipe.
 
-Larissa e Clara: Durante nossas sessões recentes de pair programming, focamos também em três tarefas principais: pensar na nova atualização do diagrama, pesquisa de bugs e reimaginação do front-end da aplicação.
+**Larissa e Clara**: Durante nossas sessões recentes de pair programming, focamos também em três tarefas principais: pensar na nova atualização do diagrama, pesquisa de bugs e reimaginação do front-end da aplicação.
 
-Resultado: Com sucesso, concluímos tudo o que tínhamos pensado. Organização do diagrama, que, antes estava incorreto, procura por bugs a fim de relatá-los no nosso bug tracker e colaboramos com mais ideias e testes de front-end.
+**Resultado**: Com sucesso, concluímos tudo o que tínhamos pensado. Organização do diagrama, que, antes estava incorreto, procura por bugs a fim de relatá-los no nosso bug tracker e colaboramos com mais ideias e testes de front-end.
 
-João Pedro Fontes e João Pedro Maranhão: Durante nossas sessões de pair programming, trabalhamos juntos no desenvolvimento de duas funcionalidades principais para nossa plataforma: a edição de reviews e a implementação de um sistema de avaliação com estrelas para jogos. Nosso foco foi integrar essas funcionalidades de maneira eficaz, tanto no backend quanto no front-end, e garantir seu funcionamento.
+**João Pedro Fontes e João Pedro Maranhão**: Durante nossas sessões de pair programming, trabalhamos juntos no desenvolvimento de duas funcionalidades principais para nossa plataforma: a edição de reviews e a implementação de um sistema de avaliação com estrelas para jogos. Nosso foco foi integrar essas funcionalidades de maneira eficaz, tanto no backend quanto no front-end, e garantir seu funcionamento.
 
-Resultado: Conseguimos implementar com sucesso a funcionalidade de edição de reviews, permitindo aos usuários modificar suas avaliações de forma segura e intuitiva. O sistema de avaliação com estrelas também foi bem-sucedido, oferecendo uma interface agradável e fácil de usar. Os testes automatizados confirmaram a robustez das novas funcionalidades.
+**Resultado**: Conseguimos implementar com sucesso a funcionalidade de edição de reviews, permitindo aos usuários modificar suas avaliações de forma segura e intuitiva. O sistema de avaliação com estrelas também foi bem-sucedido, oferecendo uma interface agradável e fácil de usar. Os testes automatizados confirmaram a robustez das novas funcionalidades.
 
-Conclusão: As sessões de pair programming foram extremamente benéficas, não só para o desenvolvimento técnico das funcionalidades, mas também para o aprendizado mútuo e aprimoramento das nossas habilidades. A experiência reforçou a importância da colaboração e da comunicação eficaz no sucesso do projeto.
+**Conclusão**: As sessões de pair programming foram extremamente benéficas, não só para o desenvolvimento técnico das funcionalidades, mas também para o aprendizado mútuo e aprimoramento das nossas habilidades. A experiência reforçou a importância da colaboração e da comunicação eficaz no sucesso do projeto.
 
 </details>
 
