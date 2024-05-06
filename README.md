@@ -313,7 +313,7 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 </details>
 
-<br>
+<br/>
 
 </details>
 
@@ -322,6 +322,8 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <a href="https://github.com/apabsp/Checkpoint/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=apabsp/Checkpoint" />
 </a>
+
+<br/>
 
 <ul>
     <li>
