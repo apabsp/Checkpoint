@@ -1,5 +1,7 @@
 # Plataforma de Review de Jogos
-![image](https://github.com/lariisantos/Projeto-FDS/assets/142417937/f018c00d-9b12-4d22-a83e-7bba8b0d4c38)
+
+![checkpoint](https://github.com/apabsp/Checkpoint/assets/63313892/83c8a207-6c29-4c70-9a48-e50f3d017cfb)
+
 
 Esse projeto foi desenvolvido como parte da disciplina de Fundamentos de Desenvolvimento de Software. 
 
