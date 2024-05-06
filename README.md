@@ -318,6 +318,11 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 </details>
 
 ## Contribuidores 👨‍👩‍👧‍👦
+
+<a href="https://github.com/apabsp/Checkpoint/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=apabsp/Checkpoint" />
+</a>
+
 <ul>
     <li>
         <a href="https://github.com/apabsp">Antonio Paulo Barros</a> - apabsp@cesar.school 📩
