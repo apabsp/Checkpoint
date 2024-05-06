@@ -259,6 +259,14 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 ![Visualizar Review](https://github.com/apabsp/Checkpoint/assets/130470569/5d8c3544-9d40-48a4-b948-80120194a955)
 ![Comentar Review](https://github.com/apabsp/Checkpoint/assets/130470569/dc95710d-d55c-4288-af80-4a0a8aae0444)
 
+**Relatos de Pair Programming**
+
+Antonio e Heloísa: Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de deletar uma review, realizar melhorias no front-end e implementar testes utilizando Cypress. 
+
+Resultado: O desenvolvimento da funcionalidade de deletar reviews foi particularmente ágil, graças ao domínio de Django por ambos. Já as melhorias no front-end foram alcançadas com sucesso, após uma investigação detalhada e algumas iterações de design e usabilidade. Quanto aos testes em Cypress, após de pesquisa para melhor compreensão da ferramenta, conseguimos implementar os testes automatizados.
+
+Conclusão: O pair programming serviu para aprendermos mais sobre Front-End em geral e sobre a ferramenta Cypress, além do trabalho em equipe.
+
 </details>
 
 <br>
