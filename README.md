@@ -53,7 +53,7 @@ Este projeto foi desenvolvido por:
     Larissa Sobrinho
     Heloísa Tanaka -->
 <details>
- <summary><h1>Processo</h1></summary>
+ <summary><h2>Processo</h2></summary>
 
  1. Ideação:
     ![image-6](https://github.com/lariisantos/Projeto-FDS/assets/95260401/b1a8acaa-1282-4aef-a0d3-888df356605e)
