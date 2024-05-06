@@ -162,6 +162,7 @@ Para rodar em ambiente **local**, siga os passos:
 ![image](https://github.com/lariisantos/Checkpoint/assets/95260401/cdecf9de-1608-45d8-a514-408709154997)
 </details>
 
+<br/>
 
 <details>
 <summary>Entrega 2:</summary>
@@ -226,6 +227,8 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 ![image](https://github.com/apabsp/Checkpoint/assets/130470569/765ffa31-1365-4128-a64a-5c93c198a5b2)
 </details>
 
+<br/>
+
 <details>
 <summary>Entrega 3:</summary>
 
@@ -240,23 +243,27 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 **Link do [Screencast dos testes](https://drive.google.com/file/d/1_FSLtyZh1p8cmYHwtVNLTW8CJ3pCGT_y/view?usp=sharing)**
 
 
-
+<br/>
 <details>
- <summary><h3>Diagrama de Atividades</h3></summary>
+ <summary>Diagrama de Atividades</summary>
 
 ![Diagrama Checkpoint drawio](https://github.com/apabsp/Checkpoint/assets/133816986/1bb3d519-efea-4544-a8d4-105d8b26bfa7)
 </details>
 
+<br/>
+
 <details>
- <summary><h3>Bug Tracker</h3></summary>
+ <summary>Bug Tracker</summary>
     
 ![imageCaptura de tela 2024-05-05 201220](https://github.com/apabsp/Checkpoint/assets/142419152/9ff6591b-070e-46c7-a474-eb1247ab01d5)
 ![imageCaptura de tela 2024-05-05 200951](https://github.com/apabsp/Checkpoint/assets/142419152/ead8f341-da71-40d1-ac9c-6fe6e490def7)
 
 </details>
 
+<br/>
+
 <details>
- <summary><h3>Novas telas do Lo-fi</h3></summary>
+ <summary>Novas telas do Lo-fi</summary>
 
 ![Página do Jogo](https://github.com/apabsp/Checkpoint/assets/130470569/89b1fca5-d22a-4bd0-978e-7767f0185e13)
 ![Criar Review](https://github.com/apabsp/Checkpoint/assets/130470569/d9b17a4c-c506-41f0-b7bc-4c795b2def2b)
@@ -267,11 +274,11 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 </details>
 
+<br/>
 
 <details>
- <summary><h3>Relatos de Pair Programming</h3></summary>
-**Relatos de Pair Programming**
-
+<summary>Relatos de Pair Programming</summary>
+<br/>
 Antonio e Heloísa: Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de deletar uma review, realizar melhorias no front-end e implementar testes utilizando Cypress. 
 
 Resultado: O desenvolvimento da funcionalidade de deletar reviews foi particularmente ágil, graças ao domínio de Django por ambos. Já as melhorias no front-end foram alcançadas com sucesso, após uma investigação detalhada e algumas iterações de design e usabilidade. Quanto aos testes em Cypress, após de pesquisa para melhor compreensão da ferramenta, conseguimos implementar os testes automatizados.
@@ -282,10 +289,17 @@ Larissa e Clara: Durante nossas sessões recentes de pair programming, focamos t
 
 Resultado: Com sucesso, concluímos tudo o que tínhamos pensado. Organização do diagrama, que, antes estava incorreto, procura por bugs a fim de relatá-los no nosso bug tracker e colaboramos com mais ideias e testes de front-end.
 
+João Pedro Fontes e João Pedro Maranhão: Durante nossas sessões de pair programming, trabalhamos juntos no desenvolvimento de duas funcionalidades principais para nossa plataforma: a edição de reviews e a implementação de um sistema de avaliação com estrelas para jogos. Nosso foco foi integrar essas funcionalidades de maneira eficaz, tanto no backend quanto no front-end, e garantir seu funcionamento.
+
+Resultado: Conseguimos implementar com sucesso a funcionalidade de edição de reviews, permitindo aos usuários modificar suas avaliações de forma segura e intuitiva. O sistema de avaliação com estrelas também foi bem-sucedido, oferecendo uma interface agradável e fácil de usar. Os testes automatizados confirmaram a robustez das novas funcionalidades.
+
+Conclusão: As sessões de pair programming foram extremamente benéficas, não só para o desenvolvimento técnico das funcionalidades, mas também para o aprendizado mútuo e aprimoramento das nossas habilidades. A experiência reforçou a importância da colaboração e da comunicação eficaz no sucesso do projeto.
 
 </details>
 
 <br>
+
+</details>
 
 ## Contribuidores 👨‍👩‍👧‍👦
 <ul>
