@@ -234,6 +234,9 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 ## Entrega 3:
 
+<details>
+ <summary>Screencasts</summary>
+
 **link do [Screencast do build e deploy com os testes](https://drive.google.com/file/d/18qB9hdLpaBI_lFlOlaB3Zm7JEf0Q-Ni5/view)**
 
 
@@ -241,7 +244,19 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 
 **Link do [Screencast dos testes](https://drive.google.com/file/d/1_FSLtyZh1p8cmYHwtVNLTW8CJ3pCGT_y/view?usp=sharing)**
+</details>
 
+<br/>
+
+<details>
+ <summary>Jira</summary>
+
+![image](https://github.com/apabsp/Checkpoint/assets/95260401/3e436287-a5a2-461c-8f16-2a9e8bc5d8ee)
+![image](https://github.com/apabsp/Checkpoint/assets/95260401/9e9f34f5-d48e-4a22-a12f-be0d102656bc)
+
+
+
+</details>
 
 <br/>
 <details>
