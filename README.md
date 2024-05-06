@@ -18,23 +18,25 @@ O **CheckPoint** tem como objetivo fornecer uma plataforma para que os usuários
 
 ## Histórias:
 
-1. Eu, como usuário típico gostaria de editar meu perfil.
-2. Eu como usuário típico gostariar de avaliar (0-5 estrelas) os jogos disponíveis.
-3. Eu como usuário típico gostaria de favoritar jogos para que apareçam em meu perfil.
-4. Eu como usuário típico gostariar de fazer uma review (comentada).
-5. Eu como usuário típico gostariar de apagar uma review já criada.
-6. Eu como usuário típico gostariar de editar uma review já criada.
-7. Eu como usuário típico gostaria de poder visualizar a review de outro usuário.
-8. Eu como usuário típico gostaria de poder curtir a review de outro usuário.
-9. Eu como usuário típico gostaria de poder comentar a review de outro usuário.
-10. Eu como usuário típico gostaria de adicionar jogos a minha “lista de desejos” ou “wishlist”, para demonstrar meu interesse por aquele jogo.
-11. Eu como usuário típico gostaria de visualizar a wishlist de outros usuários.
-12. Eu como usuário típico gostaria de pesquisar por usuários.
-13. Eu como usuário típico gostaria visualizar o perfil de outros usuários.
-14. Eu como usuário típico gostaria de seguir outros usuários.
-15. Eu como usuário típico gostaria de ver uma aba com reviews recentes de pessoas seguidas.
-16. Eu como usuário típico gostaria de pesquisar por jogos específicos.
-17. Eu como usuário típico gostaria de curtir um jogo.
+<ol>
+  <li>Eu, como usuário típico gostaria de editar meu perfil.</li>
+  <li><b>Eu como usuário típico gostariar de avaliar (0-5 estrelas) os jogos disponíveis.</b></li>
+  <li>Eu como usuário típico gostaria de favoritar jogos para que apareçam em meu perfil.</li>
+  <li><b>Eu como usuário típico gostariar de fazer uma review (comentada).</b></li>
+  <li><b>Eu como usuário típico gostariar de apagar uma review já criada.</b></li>
+  <li><b>Eu como usuário típico gostariar de editar uma review já criada.</b></li>
+  <li><b>Eu como usuário típico gostaria de poder visualizar a review de outro usuário.</b></li>
+  <li>Eu como usuário típico gostaria de poder curtir a review de outro usuário.</li>
+  <li>Eu como usuário típico gostaria de poder comentar a review de outro usuário.</li>
+  <li><b>Eu como usuário típico gostaria de adicionar jogos a minha “lista de desejos” ou “wishlist”, para demonstrar meu interesse por aquele jogo.</b></li>
+  <li>Eu como usuário típico gostaria de visualizar a wishlist de outros usuários.</li>
+  <li>Eu como usuário típico gostaria de pesquisar por usuários.</li>
+  <li>Eu como usuário típico gostaria visualizar o perfil de outros usuários.</li>
+  <li>Eu como usuário típico gostaria de seguir outros usuários.</li>
+  <li>Eu como usuário típico gostaria de ver uma aba com reviews recentes de pessoas seguidas.</li>
+  <li><b>Eu como usuário típico gostaria de pesquisar por jogos específicos.</b></li>
+  <li><b>Eu como usuário típico gostaria de curtir um jogo.</b></li>
+</ol>
 
 ## Sobre:
 
