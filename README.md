@@ -278,6 +278,11 @@ Resultado: O desenvolvimento da funcionalidade de deletar reviews foi particular
 
 Conclusão: O pair programming serviu para aprendermos mais sobre Front-End em geral e sobre a ferramenta Cypress, além do trabalho em equipe.
 
+Larissa e Clara: Durante nossas sessões recentes de pair programming, focamos também em três tarefas principais: pensar na nova atualização do diagrama, pesquisa de bugs e reimaginação do front-end da aplicação.
+
+Resultado: Com sucesso, concluímos tudo o que tínhamos pensado. Organização do diagrama, que, antes estava incorreto, procura por bugs a fim de relatá-los no nosso bug tracker e colaboramos com mais ideias e testes de front-end.
+
+
 </details>
 
 <br>
