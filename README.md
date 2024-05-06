@@ -52,8 +52,8 @@ Este projeto foi desenvolvido por:
     João Pedro Maranhão
     Larissa Sobrinho
     Heloísa Tanaka -->
-    
-## Processo: 
+<details>
+ <summary><h1>Processo</h1></summary>
 
  1. Ideação:
     ![image-6](https://github.com/lariisantos/Projeto-FDS/assets/95260401/b1a8acaa-1282-4aef-a0d3-888df356605e)
@@ -77,7 +77,7 @@ Este projeto foi desenvolvido por:
     ![Criar Review](https://github.com/lariisantos/Checkpoint/assets/95260401/0c0d0305-7c56-4ddf-9e02-b5e2a6cc0315)
     ![Visualizar Review](https://github.com/lariisantos/Checkpoint/assets/95260401/54d0e6d0-e71c-4b44-b085-fc96d4ea06f0)
     ![Comentar Review](https://github.com/lariisantos/Checkpoint/assets/95260401/ae12878e-d5d1-4ac2-a2a1-5aa0048828fd)
-
+</details>
 
 ## Método utilizado - pair programming
 O projeto foi feito utilizando o pair-programming, com duplas randomizadas e alternadas a cada semana
@@ -250,15 +250,20 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 ![image!Captura de tela 2024-05-05 201220](https://github.com/apabsp/Checkpoint/assets/142419152/9ff6591b-070e-46c7-a474-eb1247ab01d5)
 ![image!Captura de tela 2024-05-05 200951](https://github.com/apabsp/Checkpoint/assets/142419152/ead8f341-da71-40d1-ac9c-6fe6e490def7)
 
+<details>
+ <summary><h2>Novas telas do Lo-fi</h2></summary>
 
-**Atualização do Lo-fi**
 ![Página do Jogo](https://github.com/apabsp/Checkpoint/assets/130470569/89b1fca5-d22a-4bd0-978e-7767f0185e13)
 ![Criar Review](https://github.com/apabsp/Checkpoint/assets/130470569/d9b17a4c-c506-41f0-b7bc-4c795b2def2b)
 ![Review Postada](https://github.com/apabsp/Checkpoint/assets/130470569/373d49d7-06b7-4d3f-b6be-a7bd385d621c)
 ![Editar Review](https://github.com/apabsp/Checkpoint/assets/130470569/5d537448-a8a7-4226-ab62-419a879f6aa4)
 ![Visualizar Review](https://github.com/apabsp/Checkpoint/assets/130470569/5d8c3544-9d40-48a4-b948-80120194a955)
 ![Comentar Review](https://github.com/apabsp/Checkpoint/assets/130470569/dc95710d-d55c-4288-af80-4a0a8aae0444)
+</details>
 
+
+<details>
+ <summary><h2>Relatos de Pair Programming</h2></summary>
 **Relatos de Pair Programming**
 
 Antonio e Heloísa: Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de deletar uma review, realizar melhorias no front-end e implementar testes utilizando Cypress. 
