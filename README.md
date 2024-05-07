@@ -241,13 +241,16 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <details>
  <summary>Screencasts</summary>
 
-**link do [Screencast do build e deploy com os testes](https://drive.google.com/file/d/18qB9hdLpaBI_lFlOlaB3Zm7JEf0Q-Ni5/view)**
+**Link do [Screencast do LoFi](https://drive.google.com/file/d/12a0_gtoHXDT2dRK7sGBf7f1rRqEmfe_2/view?usp=sharing)**
+
+**Link do [Screencast do build e deploy com os testes](https://drive.google.com/file/d/18qB9hdLpaBI_lFlOlaB3Zm7JEf0Q-Ni5/view)**
 
 
 **Link do [Screencast do Sistema](https://drive.google.com/file/d/1g7MePDxJtaA5RkR7Sp5ZHjIKzh6Ctxd1/view?usp=sharing)**
 
 
 **Link do [Screencast dos testes](https://drive.google.com/file/d/1_FSLtyZh1p8cmYHwtVNLTW8CJ3pCGT_y/view?usp=sharing)**
+
 </details>
 
 <br/>
