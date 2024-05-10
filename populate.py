@@ -1,7 +1,5 @@
 import json
 from app.models import Game
-from django.contrib.auth.models import User
-from django.http import JsonResponse
 
 # A string containing JSON data
 
@@ -594,31 +592,20 @@ json_string = '''[
     }
 ]'''
 
+# Parse the JSON string
+games = json.loads(json_string)
 
-def populate(req):
-    
-    user1 = User.objects.create_user(username="usuarioficticio", password="senhaficticia", email="usuarioficticio@teste.com")
-    user1.save()
-    print("TESTE!!!")
-    user2 = User.objects.create_user(username="usuarioficticio2", password="senhaficticia2", email="usuarioficticio2@teste.com")
-    user2.save()
-    
-    # Parse the JSON string
-    games = json.loads(json_string)
+for game in games:
+    name = game['name']
+    image = game['image']
+    platforms = game['platforms']
+    screenshots = game['screenshots']
 
-    for game in games:
-        name = game["name"]
-        image = game["image"]
-        platforms = game["platforms"]
-        screenshots = game["screenshots"]
+    try:
+        Game.objects.get(name=name)
+        continue
+    except:
+        gamedb = Game.objects.create(name=name, image=image, platforms=platforms, screenshots=screenshots)
+        gamedb.save()
 
-        try:
-            Game.objects.get(name=name)
-            continue
-        except:
-            gamedb = Game.objects.create(name=name, image=image, platforms=platforms, screenshots=screenshots)
-            gamedb.save()
-
-            print(gamedb)
-
-    return JsonResponse({"message": "Populated"})
+        print(gamedb)

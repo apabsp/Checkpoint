@@ -85,6 +85,10 @@ class GameView(View):
     def post(self, req, id):
 
         if req.POST.get("action") == "submit_review":
+            texto_da_review = req.POST.get("textoDaReview")
+            if texto_da_review == "" or texto_da_review.isspace():
+                messages.add_message(req, constants.SUCCESS, "Review está vazia! Digite algo!")
+                return redirect("app:game", id=id)
             return self.criandoReview(req, id)
         
         typeAction = json.loads(req.body)["type"]
@@ -201,6 +205,9 @@ class ReviewView(View):
         try:
             toEdit = Review.objects.get(pk=id)
             toEdit.text = req.POST.get("review-text")
+            if toEdit.text == "" or toEdit.text.isspace():
+                messages.add_message(req, constants.SUCCESS, "Por favor, insira um texto válido!")
+                return redirect("app:review", id=id)
             toEdit.save()
 
             messages.add_message(req, constants.SUCCESS, "Review alterada com sucesso!")
