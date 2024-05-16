@@ -12,7 +12,8 @@ def getUser(req):
     context = {
         "user": {
             "username": user.username,
-            "email": user.email
+            "email": user.email,
+            "userId": user
         }
     }
     return context
@@ -180,7 +181,7 @@ class ReviewView(View):
                 context["game"] = game
                 context["review"] = review
                 context["reviewCreator"] = reviewCreator
-
+               
                 return render(req, "app/review.html", context)
             except:
                 return redirect("app:root")
@@ -190,13 +191,16 @@ class ReviewView(View):
 
     def post(self, req, id):
         if req.user.is_authenticated:
-
+            
             action = req.POST.get("action")
 
             if action == "delete":
                 return self.delete_post(req=req, id=id)
             elif action == "edit":
                 return self.edit_post(req=req, id=id)
+            elif action == "like":
+                print("Exactly as planned!!")
+                return self.like_post(req=req, id=id)
 
         return redirect("app:root")
     
@@ -217,7 +221,31 @@ class ReviewView(View):
             print(e)
             return redirect("app:root")
 
+    def like_post(self, req, id):
+        try: 
 
+            toLike = Review.objects.get(pk=id)
+            print("Exactly as planned11!2!")
+            usernamee = getUser(req)["user"]["username"]
+            user = User.objects.get(username=usernamee)
+
+            
+            if user in toLike.liked_by.all():
+                #if it has already been liked, unlike it
+                toLike.liked_by.remove(user)
+                toLike.likes -= 1
+                messages.add_message(req, constants.SUCCESS, "Você descurtiu esta Review!")
+            else:
+                toLike.liked_by.add(user)
+                toLike.likes += 1
+                messages.add_message(req, constants.SUCCESS, "Você curtiu esta Review!")
+            #print("am I getting here?")
+            toLike.save()
+            print(f"user é isso{user}\n{Review.liked_by} all liked by é isso")
+            return redirect("app:review", id=id)
+        except Exception as e: #
+            print(e)
+            return redirect("app:root")
     def delete_post(self, req, id):
         try:
             toDelete = Review.objects.get(pk=id)

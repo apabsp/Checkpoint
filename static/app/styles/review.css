@@ -91,6 +91,8 @@ h1 {
     stroke: white;
 }
 
+
+
 @media  screen and (max-width: 1154px) {
     .container-content {
         flex-direction: column;
