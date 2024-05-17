@@ -30,7 +30,6 @@ class RootView(View):
             restGames = []
 
             for game in games:
-                print(game.platforms)
                 rates = game.rating_set.all()
                 ratesSum = 0
                 for rate in rates:
