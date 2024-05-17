@@ -36,4 +36,7 @@ class Review(models.Model):
    user = models.ForeignKey(User, on_delete=models.CASCADE)
    game = models.ForeignKey(Game, on_delete=models.CASCADE)
    text = models.TextField(max_length=10000, default="minha Review legal!")
+   likes = models.IntegerField(default=0)
+   liked_by = models.ManyToManyField(User, related_name='liked_reviews')
+   
    

@@ -21,7 +21,6 @@
 
                 <div>
                     <div class="rating">
-
                         <label class="starLabel" for="star1" title="1 star" style="cursor: pointer;">
                             <input type="number" value="1" disabled style="display: none;">
                             <svg width="25" height="25" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +70,7 @@
             <h1>{{ game.name }}</h1>
 
             {% if review %}
-                <div class="review">
+                <div class="review text-ellips">
                     {{ review.text }}
                 </div>
                 <a id="view-my-review" href="{% url 'app:review' id=review.id %}">Visualizar minha review</a>
@@ -95,7 +94,6 @@
                     {% endfor %}
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -154,8 +152,6 @@
                 }
             })
             const data = await res.json();
-            
-            //alert(data.message.concat(" {{ game.name }}"));
 
             if(res.ok) {
                 window.location.reload();

@@ -6,13 +6,15 @@ from django.contrib.messages import constants
 from .models import Game, Review
 from django.http import JsonResponse
 import json
+import math
 
 def getUser(req):
     user = User.objects.get(username=req.user)
     context = {
         "user": {
             "username": user.username,
-            "email": user.email
+            "email": user.email,
+            "userId": user
         }
     }
     return context
@@ -21,6 +23,35 @@ class RootView(View):
     def get(self, req):
         if(req.user.is_authenticated):
             context = getUser(req)
+            
+            games = Game.objects.all()
+
+            trendingGames = []
+            restGames = []
+
+            for game in games:
+                print(game.platforms)
+                rates = game.rating_set.all()
+                ratesSum = 0
+                for rate in rates:
+                    ratesSum += rate.nota
+
+                avgRates = ((ratesSum / len(rates)) * 2 * 10) if len(rates) > 0 else 0
+
+                if(avgRates == 0):
+                    restGames.append(game)
+                    continue
+
+                trendingGames.append({
+                    "game": game,
+                    "avgRate": math.ceil(avgRates)
+                })
+
+            trendingGames.sort(key=lambda g: g["avgRate"], reverse=True)
+
+            context["trendings"] = trendingGames
+            context["games"] = restGames
+
             return render(req, 'app/app.html', context)
         
         return redirect("autenticacao:signin")
@@ -85,6 +116,10 @@ class GameView(View):
     def post(self, req, id):
 
         if req.POST.get("action") == "submit_review":
+            texto_da_review = req.POST.get("textoDaReview")
+            if texto_da_review == "" or texto_da_review.isspace():
+                messages.add_message(req, constants.SUCCESS, "Review está vazia! Digite algo!")
+                return redirect("app:game", id=id)
             return self.criandoReview(req, id)
         
         typeAction = json.loads(req.body)["type"]
@@ -176,7 +211,7 @@ class ReviewView(View):
                 context["game"] = game
                 context["review"] = review
                 context["reviewCreator"] = reviewCreator
-
+               
                 return render(req, "app/review.html", context)
             except:
                 return redirect("app:root")
@@ -186,13 +221,16 @@ class ReviewView(View):
 
     def post(self, req, id):
         if req.user.is_authenticated:
-
+            
             action = req.POST.get("action")
 
             if action == "delete":
                 return self.delete_post(req=req, id=id)
             elif action == "edit":
                 return self.edit_post(req=req, id=id)
+            elif action == "like":
+                print("Exactly as planned!!")
+                return self.like_post(req=req, id=id)
 
         return redirect("app:root")
     
@@ -201,6 +239,9 @@ class ReviewView(View):
         try:
             toEdit = Review.objects.get(pk=id)
             toEdit.text = req.POST.get("review-text")
+            if toEdit.text == "" or toEdit.text.isspace():
+                messages.add_message(req, constants.SUCCESS, "Por favor, insira um texto válido!")
+                return redirect("app:review", id=id)
             toEdit.save()
 
             messages.add_message(req, constants.SUCCESS, "Review alterada com sucesso!")
@@ -210,7 +251,31 @@ class ReviewView(View):
             print(e)
             return redirect("app:root")
 
+    def like_post(self, req, id):
+        try: 
 
+            toLike = Review.objects.get(pk=id)
+            print("Exactly as planned11!2!")
+            usernamee = getUser(req)["user"]["username"]
+            user = User.objects.get(username=usernamee)
+
+            
+            if user in toLike.liked_by.all():
+                #if it has already been liked, unlike it
+                toLike.liked_by.remove(user)
+                toLike.likes -= 1
+                messages.add_message(req, constants.SUCCESS, "Você descurtiu esta Review!")
+            else:
+                toLike.liked_by.add(user)
+                toLike.likes += 1
+                messages.add_message(req, constants.SUCCESS, "Você curtiu esta Review!")
+            #print("am I getting here?")
+            toLike.save()
+            print(f"user é isso{user}\n{Review.liked_by} all liked by é isso")
+            return redirect("app:review", id=id)
+        except Exception as e: #
+            print(e)
+            return redirect("app:root")
     def delete_post(self, req, id):
         try:
             toDelete = Review.objects.get(pk=id)

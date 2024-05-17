@@ -1,5 +1,7 @@
 # Plataforma de Review de Jogos
-![image](https://github.com/lariisantos/Projeto-FDS/assets/142417937/f018c00d-9b12-4d22-a83e-7bba8b0d4c38)
+
+![checkpoint](https://github.com/apabsp/Checkpoint/assets/63313892/83c8a207-6c29-4c70-9a48-e50f3d017cfb)
+
 
 Esse projeto foi desenvolvido como parte da disciplina de Fundamentos de Desenvolvimento de Software. 
 
@@ -16,23 +18,25 @@ O **CheckPoint** tem como objetivo fornecer uma plataforma para que os usuários
 
 ## Histórias:
 
-1. Eu, como usuário típico gostaria de editar meu perfil.
-2. Eu como usuário típico gostariar de avaliar (0-5 estrelas) os jogos disponíveis.
-3. Eu como usuário típico gostaria de favoritar jogos para que apareçam em meu perfil.
-4. Eu como usuário típico gostariar de fazer uma review (comentada).
-5. Eu como usuário típico gostariar de apagar uma review já criada.
-6. Eu como usuário típico gostariar de editar uma review já criada.
-7. Eu como usuário típico gostaria de poder visualizar a review de outro usuário.
-8. Eu como usuário típico gostaria de poder curtir a review de outro usuário.
-9. Eu como usuário típico gostaria de poder comentar a review de outro usuário.
-10. Eu como usuário típico gostaria de adicionar jogos a minha “lista de desejos” ou “wishlist”, para demonstrar meu interesse por aquele jogo.
-11. Eu como usuário típico gostaria de visualizar a wishlist de outros usuários.
-12. Eu como usuário típico gostaria de pesquisar por usuários.
-13. Eu como usuário típico gostaria visualizar o perfil de outros usuários.
-14. Eu como usuário típico gostaria de seguir outros usuários.
-15. Eu como usuário típico gostaria de ver uma aba com reviews recentes de pessoas seguidas.
-16. Eu como usuário típico gostaria de pesquisar por jogos específicos.
-17. Eu como usuário típico gostaria de curtir um jogo.
+<ol>
+  <li>Eu, como usuário típico gostaria de editar meu perfil.</li>
+  <li><b>Eu como usuário típico gostariar de avaliar (0-5 estrelas) os jogos disponíveis.</b></li>
+  <li>Eu como usuário típico gostaria de favoritar jogos para que apareçam em meu perfil.</li>
+  <li><b>Eu como usuário típico gostariar de fazer uma review (comentada).</b></li>
+  <li><b>Eu como usuário típico gostariar de apagar uma review já criada.</b></li>
+  <li><b>Eu como usuário típico gostariar de editar uma review já criada.</b></li>
+  <li><b>Eu como usuário típico gostaria de poder visualizar a review de outro usuário.</b></li>
+  <li>Eu como usuário típico gostaria de poder curtir a review de outro usuário.</li>
+  <li>Eu como usuário típico gostaria de poder comentar a review de outro usuário.</li>
+  <li><b>Eu como usuário típico gostaria de adicionar jogos a minha “lista de desejos” ou “wishlist”, para demonstrar meu interesse por aquele jogo.</b></li>
+  <li>Eu como usuário típico gostaria de visualizar a wishlist de outros usuários.</li>
+  <li>Eu como usuário típico gostaria de pesquisar por usuários.</li>
+  <li>Eu como usuário típico gostaria visualizar o perfil de outros usuários.</li>
+  <li>Eu como usuário típico gostaria de seguir outros usuários.</li>
+  <li>Eu como usuário típico gostaria de ver uma aba com reviews recentes de pessoas seguidas.</li>
+  <li><b>Eu como usuário típico gostaria de pesquisar por jogos específicos.</b></li>
+  <li><b>Eu como usuário típico gostaria de curtir um jogo.</b></li>
+</ol>
 
 ## Sobre:
 
@@ -52,8 +56,8 @@ Este projeto foi desenvolvido por:
     João Pedro Maranhão
     Larissa Sobrinho
     Heloísa Tanaka -->
-    
-## Processo: 
+<details>
+ <summary><h2>Processo</h2></summary>
 
  1. Ideação:
     ![image-6](https://github.com/lariisantos/Projeto-FDS/assets/95260401/b1a8acaa-1282-4aef-a0d3-888df356605e)
@@ -77,7 +81,7 @@ Este projeto foi desenvolvido por:
     ![Criar Review](https://github.com/lariisantos/Checkpoint/assets/95260401/0c0d0305-7c56-4ddf-9e02-b5e2a6cc0315)
     ![Visualizar Review](https://github.com/lariisantos/Checkpoint/assets/95260401/54d0e6d0-e71c-4b44-b085-fc96d4ea06f0)
     ![Comentar Review](https://github.com/lariisantos/Checkpoint/assets/95260401/ae12878e-d5d1-4ac2-a2a1-5aa0048828fd)
-
+</details>
 
 ## Método utilizado - pair programming
 O projeto foi feito utilizando o pair-programming, com duplas randomizadas e alternadas a cada semana
@@ -162,6 +166,7 @@ Para rodar em ambiente **local**, siga os passos:
 ![image](https://github.com/lariisantos/Checkpoint/assets/95260401/cdecf9de-1608-45d8-a514-408709154997)
 </details>
 
+<br/>
 
 <details>
 <summary>Entrega 2:</summary>
@@ -226,19 +231,107 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 ![image](https://github.com/apabsp/Checkpoint/assets/130470569/765ffa31-1365-4128-a64a-5c93c198a5b2)
 </details>
 
+<br/>
+
 <details>
 <summary>Entrega 3:</summary>
 
 ## Entrega 3:
 
-**Diagrama de Atividades**
+<details>
+ <summary>Screencasts</summary>
+
+**Link do [Screencast do LoFi](https://drive.google.com/file/d/12a0_gtoHXDT2dRK7sGBf7f1rRqEmfe_2/view?usp=sharing)**
+
+**Link do [Screencast do build e deploy com os testes](https://drive.google.com/file/d/18qB9hdLpaBI_lFlOlaB3Zm7JEf0Q-Ni5/view)**
+
+
+**Link do [Screencast do Sistema](https://drive.google.com/file/d/1g7MePDxJtaA5RkR7Sp5ZHjIKzh6Ctxd1/view?usp=sharing)**
+
+
+**Link do [Screencast dos testes](https://drive.google.com/file/d/1_FSLtyZh1p8cmYHwtVNLTW8CJ3pCGT_y/view?usp=sharing)**
+
+</details>
+
+<br/>
+
+<details>
+ <summary>Jira</summary>
+
+![image](https://github.com/apabsp/Checkpoint/assets/95260401/3e436287-a5a2-461c-8f16-2a9e8bc5d8ee)
+![image](https://github.com/apabsp/Checkpoint/assets/95260401/9e9f34f5-d48e-4a22-a12f-be0d102656bc)
+
+
+
+</details>
+
+<br/>
+<details>
+ <summary>Diagrama de Atividades</summary>
 
 ![Diagrama Checkpoint drawio](https://github.com/apabsp/Checkpoint/assets/133816986/1bb3d519-efea-4544-a8d4-105d8b26bfa7)
 </details>
 
-<br>
+<br/>
+
+<details>
+ <summary>Bug Tracker</summary>
+    
+![imageCaptura de tela 2024-05-05 201220](https://github.com/apabsp/Checkpoint/assets/142419152/9ff6591b-070e-46c7-a474-eb1247ab01d5)
+![imageCaptura de tela 2024-05-05 200951](https://github.com/apabsp/Checkpoint/assets/142419152/ead8f341-da71-40d1-ac9c-6fe6e490def7)
+
+</details>
+
+<br/>
+
+<details>
+ <summary>Novas telas do Lo-fi</summary>
+
+![Página do Jogo](https://github.com/apabsp/Checkpoint/assets/130470569/89b1fca5-d22a-4bd0-978e-7767f0185e13)
+![Criar Review](https://github.com/apabsp/Checkpoint/assets/130470569/d9b17a4c-c506-41f0-b7bc-4c795b2def2b)
+![Review Postada](https://github.com/apabsp/Checkpoint/assets/130470569/373d49d7-06b7-4d3f-b6be-a7bd385d621c)
+![Editar Review](https://github.com/apabsp/Checkpoint/assets/130470569/5d537448-a8a7-4226-ab62-419a879f6aa4)
+![Visualizar Review](https://github.com/apabsp/Checkpoint/assets/130470569/5d8c3544-9d40-48a4-b948-80120194a955)
+![Comentar Review](https://github.com/apabsp/Checkpoint/assets/130470569/dc95710d-d55c-4288-af80-4a0a8aae0444)
+
+</details>
+
+<br/>
+
+<details>
+<summary>Relatos de Pair Programming</summary>
+<br/>
+    
+**Antonio e Heloísa**: Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de deletar uma review, realizar melhorias no front-end e implementar testes utilizando Cypress. 
+
+**Resultado**: O desenvolvimento da funcionalidade de deletar reviews foi particularmente ágil, graças ao domínio de Django por ambos. Já as melhorias no front-end foram alcançadas com sucesso, após uma investigação detalhada e algumas iterações de design e usabilidade. Quanto aos testes em Cypress, após de pesquisa para melhor compreensão da ferramenta, conseguimos implementar os testes automatizados.
+
+**Conclusão**: O pair programming serviu para aprendermos mais sobre Front-End em geral e sobre a ferramenta Cypress, além do trabalho em equipe.
+
+**Larissa e Clara**: Durante nossas sessões recentes de pair programming, focamos também em três tarefas principais: pensar na nova atualização do diagrama, pesquisa de bugs e reimaginação do front-end da aplicação.
+
+**Resultado**: Com sucesso, concluímos tudo o que tínhamos pensado. Organização do diagrama, que, antes estava incorreto, procura por bugs a fim de relatá-los no nosso bug tracker e colaboramos com mais ideias e testes de front-end.
+
+**João Pedro Fontes e João Pedro Maranhão**: Durante nossas sessões de pair programming, trabalhamos juntos no desenvolvimento de duas funcionalidades principais para nossa plataforma: a edição de reviews e a implementação de um sistema de avaliação com estrelas para jogos. Nosso foco foi integrar essas funcionalidades de maneira eficaz, tanto no backend quanto no front-end, e garantir seu funcionamento.
+
+**Resultado**: Conseguimos implementar com sucesso a funcionalidade de edição de reviews, permitindo aos usuários modificar suas avaliações de forma segura e intuitiva. O sistema de avaliação com estrelas também foi bem-sucedido, oferecendo uma interface agradável e fácil de usar. Os testes automatizados confirmaram a robustez das novas funcionalidades.
+
+**Conclusão**: As sessões de pair programming foram extremamente benéficas, não só para o desenvolvimento técnico das funcionalidades, mas também para o aprendizado mútuo e aprimoramento das nossas habilidades. A experiência reforçou a importância da colaboração e da comunicação eficaz no sucesso do projeto.
+
+</details>
+
+<br/>
+
+</details>
 
 ## Contribuidores 👨‍👩‍👧‍👦
+
+<a href="https://github.com/apabsp/Checkpoint/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=apabsp/Checkpoint" />
+</a>
+
+<br/>
+
 <ul>
     <li>
         <a href="https://github.com/apabsp">Antonio Paulo Barros</a> - apabsp@cesar.school 📩

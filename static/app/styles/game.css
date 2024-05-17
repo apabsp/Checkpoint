@@ -56,6 +56,12 @@ h1 {
     background-color: var(--primary);
     border-radius: 1rem;
     padding: 1rem 1.5rem;
+    text-align: justify;
+}
+
+.text-ellips {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #view-my-review {
