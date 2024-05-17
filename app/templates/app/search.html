@@ -8,9 +8,9 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container-games">
+    <div class="container-searched-games">
         {% for game in games %}
-            <div class="game">
+            <div class="game-container">
                 <a class="game-image" href="{% url 'app:game' id=game.id %}">
                     <img src="{{ game.image }}" alt="game name" width="150" height="200">
                 </a>

@@ -1,6 +1,12 @@
 :root {
     --background: #181818;
+    --background2: #252525;
+    --primary: #424242;
+    --secondary: #929292;
     --zinc: #E0E0E0;
+    --green: #22c55e;
+    --amber: #f59e0b;
+    --red: #ef4444;
 }
 
 html {
@@ -25,4 +31,79 @@ body{
 
 .disabled {
     opacity: 50%;
+}
+
+.decoration-none {
+    text-decoration: none;
+}
+
+.games-container {
+    overflow-x: auto;
+    display: flex;
+    gap: 24px;
+    padding-bottom: 16px;
+}
+
+.game {
+    width: 225px;
+    height: 262px;
+    min-width: 225px;
+    min-height: 262px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.game > img {
+    object-fit: cover;
+}
+
+.game-content {
+    padding: 17px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.game-content > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.game-content > a:hover {
+    text-decoration: solid;
+}
+
+.platforms {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.rate {
+    width: 20px;
+    height: 20px;
+    border: 0.5px solid var(--secondary);
+    color: var(--secondary);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.rate-green {
+    border: 0.5px solid var(--green);
+    color: var(--green);
+}
+.rate-amber {
+    border: 0.5px solid var(--amber);
+    color: var(--amber);
+}
+.rate-red {
+    border: 0.5px solid var(--red);
+    color: var(--red);
 }

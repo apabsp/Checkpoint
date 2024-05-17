@@ -6,6 +6,7 @@ from django.contrib.messages import constants
 from .models import Game, Review
 from django.http import JsonResponse
 import json
+import math
 
 def getUser(req):
     user = User.objects.get(username=req.user)
@@ -22,6 +23,35 @@ class RootView(View):
     def get(self, req):
         if(req.user.is_authenticated):
             context = getUser(req)
+            
+            games = Game.objects.all()
+
+            trendingGames = []
+            restGames = []
+
+            for game in games:
+                print(game.platforms)
+                rates = game.rating_set.all()
+                ratesSum = 0
+                for rate in rates:
+                    ratesSum += rate.nota
+
+                avgRates = ((ratesSum / len(rates)) * 2 * 10) if len(rates) > 0 else 0
+
+                if(avgRates == 0):
+                    restGames.append(game)
+                    continue
+
+                trendingGames.append({
+                    "game": game,
+                    "avgRate": math.ceil(avgRates)
+                })
+
+            trendingGames.sort(key=lambda g: g["avgRate"], reverse=True)
+
+            context["trendings"] = trendingGames
+            context["games"] = restGames
+
             return render(req, 'app/app.html', context)
         
         return redirect("autenticacao:signin")
