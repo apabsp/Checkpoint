@@ -16,66 +16,72 @@
 
         <div class="container-review">
             <h1>{{ game.name }}</h1>
-            <div class="review">
 
-                <form class="review" action="" method="post">
+            <div class="review">
+                {{review.text}}
+            </div>
+            
+            <div class="actions-container">
+                <form action="" method="post" class="like-container">
                     {% csrf_token %}
-                    <input id="review-text" type="text" name="review-text" value="{{review.text}}" disabled>
-                    <input type="hidden" value="edit" name="action">
+                    <input type="hidden" value="like" name="action">
+                    <button type="submit" id="like-review">
+                        {% if user.userId in review.liked_by.all %}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up liked"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+                        {% else %}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-thumbs-up"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h0a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+                        {% endif %}
+                    </button>
+                    like count: {{ review.likes }}
+                </form>
+
+                <div>
                     {% if user.username == reviewCreator.username %}
-                        <button type="button" id="edit-review" style="display: none;">
+                        <button id="edit-review">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-line">
                                 <path d="M12 20h9"/>
                                 <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/>
                             </svg>
                         </button>
                     {% endif %}
-                </form>
 
-                {% if user.username == reviewCreator.username %}
-                    <form action="" method="post">
-                        {% csrf_token %}
-                        <input type="hidden" name="review_id" value="{{ review_id }}">
-                        <input type="hidden" value="delete" name="action">
-                        <button type="submit" id="delete-review">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-trash-2">
-                                <path d="M3 6h18" />
-                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
-                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
-                                <line x1="10" x2="10" y1="11" y2="17" />
-                                <line x1="14" x2="14" y1="11" y2="17" />
-                            </svg>
-                        </button>
-                    </form>
-                {% endif %}
-            </div>
-            <br>
-            <form action = "" method = "post">
-                {% csrf_token %}
-                <input type="hidden" value="like" name = "action">
-                <button type="submit" id="like-review">
-                    
-                    {% if user.userId in review.liked_by.all %}
-                    <svg width="24" height="24" viewBox="0 0 24 24" stroke = "currentColor" xmlns="http://www.w3.org/2000/svg" style="background-color: grey;">
-                        <path  d="M20.2694 16.265L20.9749 12.1852C21.1511 11.1662 20.3675 10.2342 19.3345 10.2342H14.1534C13.6399 10.2342 13.2489 9.77328 13.332 9.26598L13.9947 5.22142C14.1024 4.56435 14.0716 3.892 13.9044 3.24752C13.7659 2.71364 13.354 2.28495 12.8123 2.11093L12.6673 2.06435C12.3399 1.95918 11.9826 1.98365 11.6739 2.13239C11.3342 2.29611 11.0856 2.59473 10.9935 2.94989L10.5178 4.78374C10.3664 5.36723 10.146 5.93045 9.8617 6.46262C9.44634 7.24017 8.80416 7.86246 8.13663 8.43769L6.69789 9.67749C6.29223 10.0271 6.07919 10.5506 6.12535 11.0844L6.93752 20.4771C7.01201 21.3386 7.73231 22 8.59609 22H13.2447C16.726 22 19.697 19.5744 20.2694 16.265Z" fill="#1C274C"/>
-                        <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M2.96767 9.48508C3.36893 9.46777 3.71261 9.76963 3.74721 10.1698L4.71881 21.4063C4.78122 22.1281 4.21268 22.7502 3.48671 22.7502C2.80289 22.7502 2.25 22.1954 2.25 21.5129V10.2344C2.25 9.83275 2.5664 9.5024 2.96767 9.48508Z" fill="#1C274C"/>
-                        </svg>
-                    {%else%}
-                    <svg width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" style="background-color: grey;">
-                        <path d="M20.2694 16.265L20.9749 12.1852C21.1511 11.1662 20.3675 10.2342 19.3345 10.2342H14.1534C13.6399 10.2342 13.2489 9.77328 13.332 9.26598L13.9947 5.22142C14.1024 4.56435 14.0716 3.892 13.9044 3.24752C13.7659 2.71364 13.354 2.28495 12.8123 2.11093L12.6673 2.06435C12.3399 1.95918 11.9826 1.98365 11.6739 2.13239C11.3342 2.29611 11.0856 2.59473 10.9935 2.94989L10.5178 4.78374C10.3664 5.36723 10.146 5.93045 9.8617 6.46262C9.44634 7.24017 8.80416 7.86246 8.13663 8.43769L6.69789 9.67749C6.29223 10.0271 6.07919 10.5506 6.12535 11.0844L6.93752 20.4771C7.01201 21.3386 7.73231 22 8.59609 22H13.2447C16.726 22 19.697 19.5744 20.2694 16.265Z" fill="#F5F5F5"/>
-                        <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M2.96767 9.48508C3.36893 9.46777 3.71261 9.76963 3.74721 10.1698L4.71881 21.4063C4.78122 22.1281 4.21268 22.7502 3.48671 22.7502C2.80289 22.7502 2.25 22.1954 2.25 21.5129V10.2344C2.25 9.83275 2.5664 9.5024 2.96767 9.48508Z" fill="#F5F5F5"/>
-                    </svg>
-                    
+                    {% if user.username == reviewCreator.username %}
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="review_id" value="{{ review_id }}">
+                            <input type="hidden" value="delete" name="action">
+                            <button type="submit" id="delete-review">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-trash-2">
+                                    <path d="M3 6h18" />
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                                    <line x1="10" x2="10" y1="11" y2="17" />
+                                    <line x1="14" x2="14" y1="11" y2="17" />
+                                </svg>
+                            </button>
+                        </form>
                     {% endif %}
-                </button>
-                like count: {{ review.likes }}
-            </form>
-            
+                </div>
+            </div>
         </div>
+    </div>
 
+    <div class="edit-review-modal">
+        <div>
+            <button id="closeModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> 
+            </button>
 
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="hidden" value="edit" name="action">
+                <label for="review-text">Review</label>
+                <textarea id="review-text" name="review-text" required></textarea>
+                <button type="submit"> Salvar </button>
+            </form>
+        </div>
     </div>
 
     {% if messages %}
@@ -90,19 +96,15 @@
 
 {% block script %}
     <script>
-        const editButton = document.getElementById("edit-review");
-        const reviewContent = document.getElementById("review-text");
+        function toggleModal() {
+            const modal = document.getElementsByClassName("edit-review-modal")[0];
+            const reviewInputText = document.getElementById("review-text");
+            reviewInputText.value = "{{review.text}}"
+            
+            modal.classList.toggle("active");
+        }
 
-        editButton?.addEventListener("click", () => {
-            reviewContent.disabled = false;
-            reviewContent.focus();
-            reviewContent.select();
-
-            setTimeout(() => {
-                editButton.type = "submit";
-
-                editButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/></svg>`
-            }, 1);
-        });
+        document.getElementById("edit-review")?.addEventListener("click", toggleModal);
+        document.getElementById("closeModal")?.addEventListener("click", toggleModal);
     </script>
 {% endblock %}

@@ -15,6 +15,10 @@ a {
     text-decoration: none;
 }
 
+body {
+    height: 100vh;
+}
+
 .container-searched-games {
     flex: 1 1 0%;
     background-color: var(--background2);
