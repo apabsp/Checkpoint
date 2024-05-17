@@ -126,7 +126,7 @@ describe('Criar uma review de jogo', () => {
         cy.wait(1500)
         cy.get('.review-modal > div > form > button').click()
 
-        cy.get('#review-text').invoke('val').should("have.string", "Esse jogo é legal!")
+        cy.get('.review').invoke('text').should("have.string", "Esse jogo é legal!")
         cy.wait(1500)
         cy.get('#delete-review').click()
         cy.wait(1500)
@@ -185,11 +185,12 @@ describe('Modificar uma review de jogo', () => {
 
         cy.get('#edit-review').click()
         cy.wait(1500)
+        cy.get('#review-text').clear()
         cy.get('#review-text').type("my new review")
         cy.wait(1500)
-        cy.get('#edit-review').click()
+        cy.get('#save-edited-review').click()
 
-        cy.get('#review-text').invoke('val').should("have.string", "my new review")
+        cy.get('.review').invoke('text').should("have.string", "my new review")
         
         cy.wait(1500)
         cy.get('#delete-review').click()
@@ -239,7 +240,7 @@ describe('Visualizar Review', () => {
 
         cy.get('.user-review-link').click()
 
-        cy.get('#review-text').invoke('val').should("have.string", "Esse jogo é legal!")
+        cy.get('.review').invoke('text').should("have.string", "Esse jogo é legal!")
 
         cy.wait(1500)
         cy.get('.actions > .logout').click()
