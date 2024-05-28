@@ -54,21 +54,121 @@ class RootView(View):
             return render(req, 'app/app.html', context)
         
         return redirect("autenticacao:signin")
-    
+
+
+def searchGame(wishList, game):
+    for index, objeto in enumerate(wishList):
+        if objeto.name == game.name:
+            return index
+
+    return None
+
+
 class SearchView(View):
     def get(self, req):
         if(req.user.is_authenticated):
-            context = getUser(req)
+            user = User.objects.get(username=req.user)
+
+            context = {
+                "user": {
+                    "username": user.username,
+                    "email": user.email,
+                    "userId": user,
+                }
+            }
+
+            try:
+                profile = Profile.objects.get(user=user)
+
+            except:
+                profile = Profile.objects.create(user=user)
+                profile.save()
+                
             
             searchTerm = req.GET.get("search")
 
             games = Game.objects.all().filter(name__icontains=searchTerm)
 
-            context["games"] = games
+            wishList = profile.wishList.all()
+
+            context["games"] = []
+
+            for game in games:
+                index = searchGame(wishList, game)
+                
+                context["games"].append({
+                    "id": game.id,
+                    "name": game.name,
+                    "image": game.image,
+                    "onWishlist": True if index != None else False 
+                })
+
+            context["searchParams"] = searchTerm
 
             return render(req, 'app/search.html', context)
         
         return redirect("autenticacao:signin")
+    
+    def post(self, req):
+        if(req.user.is_authenticated):
+            user = User.objects.get(username=req.user)
+
+            context = {
+                "user": {
+                    "username": user.username,
+                    "email": user.email,
+                    "userId": user,
+                }
+            }
+            
+            searchTerm = req.POST.get("searchParams")
+            gameName = req.POST.get("currentGame")
+            action = req.POST.get("action")
+
+            games = Game.objects.all().filter(name__icontains=searchTerm)
+            game = Game.objects.all().filter(name=gameName)[0]
+
+            try:
+                profile = Profile.objects.get(user=user)
+                if(game):
+                    if(action == "add"):
+                        profile.wishList.add(game)
+                    else:
+                        profile.wishList.remove(game)
+
+                profile.save()
+
+            except:
+                profile = Profile.objects.create(user=user)
+                if(game):
+                    if(action == "add"):
+                        profile.wishList.add(game)
+                    else:
+                        profile.wishList.remove(game)
+                    
+                profile.save()
+
+
+            wishList = profile.wishList.all()
+
+            context["games"] = []
+
+            for game in games:
+                index = searchGame(wishList, game)
+                
+                context["games"].append({
+                    "id": game.id,
+                    "name": game.name,
+                    "image": game.image,
+                    "onWishlist": True if index != None else False 
+                })
+
+            context["searchParams"] = searchTerm
+
+            return render(req, 'app/search.html', context)
+        
+        return redirect("autenticacao:signin")
+
 
 class GameView(View):
     def get(self, req, id):
@@ -296,6 +396,37 @@ class ProfileView(View):
 
             except:
                 profile = Profile.objects.create(user=user)
+                    
+                profile.save()
+
+            context = {
+                "user": {
+                    "username": user.username,
+                    "email": user.email,
+                    "userId": user,
+                    "image": profile.image
+                }
+            }
+
+            context["wishlist"] = profile.wishList.all()
+
+            return render(req, 'app/profile.html', context)
+        
+        return redirect("autenticacao:signin")
+    
+    def post(self, req):
+        if(req.user.is_authenticated):
+            imageUrl = req.POST.get("url")
+
+            user = User.objects.get(username=req.user)
+
+            try:
+                profile = Profile.objects.get(user=user)
+                profile.image = imageUrl
+                profile.save()
+
+            except:
+                profile = Profile.objects.create(user=user, image=imageUrl)
                     
                 profile.save()
 

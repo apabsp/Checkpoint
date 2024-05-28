@@ -95,6 +95,11 @@ header {
     border-radius: 100%;
     min-width: 40px;
     min-height: 40px;
+    transition: all 150ms ease-in-out;
+}
+
+.icon:hover {
+    background-color: var(--secondary);
 }
 
 .logo {
