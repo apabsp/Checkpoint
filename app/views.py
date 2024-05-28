@@ -3,7 +3,7 @@ from django.views import View
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.messages import constants
-from .models import Game, Review
+from .models import Game, Review, Profile
 from django.http import JsonResponse
 import json
 import math
@@ -113,7 +113,6 @@ class GameView(View):
         return redirect("autenticacao:signin")
 
     def post(self, req, id):
-
         if req.POST.get("action") == "submit_review":
             texto_da_review = req.POST.get("textoDaReview")
             if texto_da_review == "" or texto_da_review.isspace():
@@ -252,11 +251,9 @@ class ReviewView(View):
 
     def like_post(self, req, id):
         try: 
-
             toLike = Review.objects.get(pk=id)
-            print("Exactly as planned11!2!")
-            usernamee = getUser(req)["user"]["username"]
-            user = User.objects.get(username=usernamee)
+            username = getUser(req)["user"]["username"]
+            user = User.objects.get(username=username)
 
             
             if user in toLike.liked_by.all():
@@ -275,6 +272,7 @@ class ReviewView(View):
         except Exception as e: #
             print(e)
             return redirect("app:root")
+        
     def delete_post(self, req, id):
         try:
             toDelete = Review.objects.get(pk=id)
@@ -286,3 +284,32 @@ class ReviewView(View):
         except Exception as e:
             print(e)
             return redirect("app:root")
+        
+
+class ProfileView(View):
+    def get(self, req):
+        if(req.user.is_authenticated):
+            user = User.objects.get(username=req.user)
+
+            try:
+                profile = Profile.objects.get(user=user)
+
+            except:
+                profile = Profile.objects.create(user=user)
+                    
+                profile.save()
+
+            context = {
+                "user": {
+                    "username": user.username,
+                    "email": user.email,
+                    "userId": user,
+                    "image": profile.image
+                }
+            }
+
+            context["wishlist"] = profile.wishList.all()
+
+            return render(req, 'app/profile.html', context)
+        
+        return redirect("autenticacao:signin")

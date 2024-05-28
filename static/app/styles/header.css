@@ -87,10 +87,6 @@ header {
     gap: 1rem;
 }
 
-.min {
-    min-width: 50px;
-}
-
 .icon {
     display: flex;
     align-items: center;
