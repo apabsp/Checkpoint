@@ -73,14 +73,31 @@
                 <div class="review text-ellips">
                     {{ review.text }}
                 </div>
-                <a id="view-my-review" href="{% url 'app:review' id=review.id %}">Visualizar minha review</a>
-            {% else %}
-                <div class="">
-                    <button id="addReview">Adicionar Review</button>
-                </div>
             {% endif %}
-
             
+            <div class="actions-container">
+                {% if review %}
+                <a id="view-my-review" href="{% url 'app:review' id=review.id %}">Visualizar minha review</a>
+                {% else %}
+                <button id="addReview">Adicionar Review</button>
+                {% endif %}
+                
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <input type="hidden" name="action" value="wishlist">
+                    
+                    {% if onWishlist %}
+                        <input type="hidden" name="wishlistAction" value="remove">
+                        <button type="submit" class="remove-wishlist">Remover da wishlist</button>
+                    {% else %}
+                        <button type="submit" class="add-wishlist">Adicionar a wishlist</button>
+                        <input type="hidden" name="wishlistAction" value="add">
+                    {% endif %}
+                    
+                    <input type="hidden" name="game" value="{{game.id}}">
+                </form>
+            </div>
             
             <div class="container-user-reviews">
                 <h2 class="review-title">Review dos usuários</h2>
