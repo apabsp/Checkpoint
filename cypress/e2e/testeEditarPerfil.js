@@ -6,13 +6,13 @@ describe('Editar Perfil', () =>{
         cy.get('[placeholder="Senha"]').type('senhaficticia')
         cy.get('.poppins-semibold').click()
 
-        cy.get('.profile icon').click();
+        cy.get('.profile').click();
         cy.wait(1500)
 
         cy.get('#image-profile').click();
         cy.wait(1500)        
 
-        cy.get('.edit-profile-modal active > .url-insert > #url').type('https://i.pinimg.com/564x/a3/0f/bc/a30fbc226ee503d291750a45a4dda359.jpg')
+        cy.get('#url').type('https://i.pinimg.com/564x/a3/0f/bc/a30fbc226ee503d291750a45a4dda359.jpg')
         cy.wait(1500)
         cy.get('.save-button').click()
     })
@@ -24,13 +24,13 @@ describe('Editar Perfil', () =>{
         cy.get('[placeholder="Senha"]').type('senhaficticia')
         cy.get('.poppins-semibold').click()
 
-        cy.get('.profile icon').click();
+        cy.get('.profile').click();
         cy.wait(1500)
 
         cy.get('#image-profile').click();
         cy.wait(1500)        
 
-        cy.get('.edit-profile-modal active > .url-insert > .save-button').click()
+        cy.get('.save-button').click()
         cy.wait(1500)    
     })
 

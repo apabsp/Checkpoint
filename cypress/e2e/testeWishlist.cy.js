@@ -26,7 +26,7 @@ describe('Wishlist', () =>{
         cy.wait(1500)
         cy.get('.search-button').click()
 
-        cy.get('.game-name').invoke('text').should('have.string', "Gris")
+        cy.get('.game-name').invoke('text').should('have.string', "GRIS")
         cy.wait(1500)
         cy.get('.game-name').click()
 
