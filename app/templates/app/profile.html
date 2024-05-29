@@ -91,12 +91,12 @@
 
             <h2>Editar perfil</h2>
 
-            <form method="post">
+            <form method="post" class="url-insert">
                 {% csrf_token %}
                 <label for="url">Imagem de Perfil</label>
                 <input type="text" name="url" id="url" placeholder="insira a url da imagem">
 
-                <button type="submit">Salvar</button>
+                <button type="submit" class="save-button">Salvar</button>
             </form>
         </div>
     </div>
