@@ -324,6 +324,87 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 </details>
 
+<details>
+<summary>Entrega 4:</summary>
+
+## Entrega :
+
+<details>
+ <summary>Screencasts</summary>
+
+**Link do [Screencast do LoFi](link)**
+
+**Link do [Screencast do build e deploy com os testes](link)**
+
+
+**Link do [Screencast do Sistema](link)**
+
+
+**Link do [Screencast dos testes](link)**
+
+</details>
+
+<br/>
+
+<details>
+ <summary>Jira</summary>
+
+</details>
+
+<br/>
+<details>
+ <summary>Diagrama de Atividades</summary>
+
+
+</details>
+
+<br/>
+
+<details>
+ <summary>Bug Tracker</summary>
+    
+
+</details>
+
+<br/>
+
+<details>
+ <summary>Novas telas do Lo-fi</summary>
+
+
+</details>
+
+<br/>
+
+<details>
+<summary>Relatos de Pair Programming</summary>
+<br/>
+    
+**A1 e A2**: 
+
+**Resultado**:
+
+**Conclusão**: 
+
+**A3 e A4**: 
+
+**Resultado**:
+
+**Conclusão**: 
+
+**A5 e A6**: 
+
+**Resultado**:
+
+**Conclusão**: 
+
+
+</details>
+
+<br/>
+
+</details>
+
 ## Contribuidores 👨‍👩‍👧‍👦
 
 <a href="https://github.com/apabsp/Checkpoint/graphs/contributors">
