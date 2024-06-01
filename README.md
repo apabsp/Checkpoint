@@ -157,7 +157,6 @@ Para rodar em ambiente **local**, siga os passos:
 <summary>Entrega 1:</summary>
 
 ## Entrega 1:
-
 - [Link Screencast protótipo lo-fi](https://www.youtube.com/watch?v=2ysd68vxMM0)
 
 - Progresso no Jira
@@ -371,6 +370,7 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <details>
  <summary>Novas telas do Lo-fi</summary>
 
+  ![Editar Perfil](https://github.com/apabsp/Checkpoint/assets/130470569/1be3ec45-19b6-4ec4-9fc3-d0277da0c99a)
 
 </details>
 
