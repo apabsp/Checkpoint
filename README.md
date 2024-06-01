@@ -324,6 +324,8 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 </details>
 
+<summary>Entrega 4:</summary>
+
 ## Entrega 4:
 
 <details>
