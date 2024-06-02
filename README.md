@@ -384,7 +384,7 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <summary>Relatos de Pair Programming</summary>
 <br/>
     
-### Relato 1: João Pedro Fontes e Heloísa Tanaka
+### Antônio Paulo e Clara Machado
 
 **Tarefas Principais:**
 Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de curtir uma review, realizar melhorias no front-end e implementar testes utilizando Cypress.
@@ -397,7 +397,7 @@ O pair programming nos permitiu aprofundar nosso entendimento sobre a importânc
 
 ---
 
-### Relato 2: João Pedro Maranhão e Larissa Sobrinho
+### João Pedro Maranhão e Larissa Sobrinho
 
 **Tarefas Principais:**
 Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de editar o perfil (focando na edição da foto), realizar melhorias no front-end e automatizar testes com Cypress.
@@ -410,7 +410,7 @@ O pair programming foi essencial para aprimorarmos nossas habilidades em manipul
 
 ---
 
-### Relato 3: Antônio Paulo e Clara Machado
+### João Pedro Fontes e Heloísa Tanaka
 
 **Tarefas Principais:**
 Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de adicionar um jogo à wishlist, realizar melhorias no back-end e automatizar testes com Cypress.
