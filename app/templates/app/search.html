@@ -18,6 +18,20 @@
                     <a href="{% url 'app:game' id=game.id %}">
                         <h1 class="game-name">{{ game.name }}</h1>
                     </a>
+
+                    <form method="post" class="add-wishlist">
+                        {% csrf_token %}
+                            {% if not game.onWishlist %}
+                                <input type="hidden" name="action" value="add">
+                                <button class="add-wishlist-btn">Adicionar a wishList</button>
+                            {% else %}
+                                <input type="hidden" name="action" value="remove">
+                                <button class="remove-wishtlist-btn">Remover da wishList</button>
+                            {% endif %}
+
+                            <input type="hidden" name="currentGame" value="{{game.name}}">
+                            <input type="hidden" name="searchParams" value="{{searchParams}}">
+                        </form>
                 </div>
             </div>
             

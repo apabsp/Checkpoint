@@ -4,6 +4,9 @@
     --primary: #424242;
     --secondary: #929292;
     --zinc: #E0E0E0;
+    --red-200: #fecaca;
+    --red-300: #fca5a5;
+    --red-600: #dc2626;
 }
 
 hr {
@@ -47,6 +50,33 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: 1rem;
+}
+
+.add-wishlist > button {
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.6rem;
+    font-family: "Poppins";
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+.add-wishlist-btn {
+    background-color: var(--primary);
+}
+
+.remove-wishtlist-btn {
+    background-color: var(--red-300);
+    color: var(--red-600);
+}
+
+.remove-wishtlist-btn:hover {
+    background-color: var(--red-200);
+}
+
+.add-wishlist-btn:hover {
+    background-color: var(--secondary);
 }
 
 @media screen and (max-width: 840px) {
