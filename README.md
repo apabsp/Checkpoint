@@ -353,7 +353,8 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <br/>
 <details>
  <summary>Diagrama de Atividades</summary>
-  ![image](https://github.com/apabsp/Checkpoint/assets/95260401/8c92ba97-7fa7-4a4c-876d-3b7c64c9e3dc)
+
+![Sem título](https://github.com/apabsp/Checkpoint/assets/95260401/9a7fe9ba-bcea-48e4-8c02-0e235ea81908)
 
 
 
@@ -373,7 +374,7 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <details>
  <summary>Novas telas do Lo-fi</summary>
 
-  ![Editar Perfil](https://github.com/apabsp/Checkpoint/assets/130470569/1be3ec45-19b6-4ec4-9fc3-d0277da0c99a)
+![Editar Perfil](https://github.com/apabsp/Checkpoint/assets/130470569/1be3ec45-19b6-4ec4-9fc3-d0277da0c99a)
 
 </details>
 
