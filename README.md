@@ -331,15 +331,15 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <details>
  <summary>Screencasts</summary>
 
-**Link do [Screencast do LoFi](link)**
+**Link do [Screencast do LoFi](https://drive.google.com/file/d/1_cblsfSAV3-qgVoli3GXO3WtDU_DTQX9/view?usp=sharing)**
 
 **Link do [Screencast do build e deploy com os testes](link)**
 
 
-**Link do [Screencast do Sistema](link)**
+**Link do [Screencast do Sistema](https://drive.google.com/file/d/1d3ZZhPALKAYAOU2Dx9fOS-WyJ0PS5NkA/view?usp=sharing)**
 
 
-**Link do [Screencast dos testes](link)**
+**Link do [Screencast dos testes](https://drive.google.com/file/d/1BX4eyS2HXYqywU8-uIANL2kGyWjfZNV5/view?usp=sharing)**
 
 </details>
 
