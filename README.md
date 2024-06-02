@@ -353,7 +353,8 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <br/>
 <details>
  <summary>Diagrama de Atividades</summary>
-  ![Sem título](https://github.com/apabsp/Checkpoint/assets/95260401/7beae95d-61eb-449d-8bc0-337f84e3795b)
+  ![image](https://github.com/apabsp/Checkpoint/assets/95260401/8c92ba97-7fa7-4a4c-876d-3b7c64c9e3dc)
+
 
 
 
