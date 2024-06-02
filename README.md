@@ -333,7 +333,7 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 **Link do [Screencast do LoFi](https://drive.google.com/file/d/1_cblsfSAV3-qgVoli3GXO3WtDU_DTQX9/view?usp=sharing)**
 
-**Link do [Screencast do build e deploy com os testes](link)**
+**Link do [Screencast do build e deploy com os testes](https://drive.google.com/file/d/1yIxu6EHwEGITw3BFteW7Hqurgfi6u2XI/view?usp=sharing)**
 
 
 **Link do [Screencast do Sistema](https://drive.google.com/file/d/1d3ZZhPALKAYAOU2Dx9fOS-WyJ0PS5NkA/view?usp=sharing)**
@@ -353,6 +353,8 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <br/>
 <details>
  <summary>Diagrama de Atividades</summary>
+  ![Sem título](https://github.com/apabsp/Checkpoint/assets/95260401/7beae95d-61eb-449d-8bc0-337f84e3795b)
+
 
 
 </details>
