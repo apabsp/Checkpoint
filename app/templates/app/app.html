@@ -11,6 +11,7 @@
         <h2>Trending Games</h2>
         <div class="games-container">
             {% for trending in trendings %}
+            <a href="{% url 'app:game' id=trending.game.id %}" class="decoration-none">
                 <div class="game">
                     <img src="{{ trending.game.image }}" alt="game name" width="225" height="150">
 
@@ -64,18 +65,18 @@
                                 </div>
                             {% endif %}
                         </div>
-
-                        <a href="{% url 'app:game' id=trending.game.id %}" class="decoration-none">
-                            {{ trending.game.name }}
-                        </a>
+                        
+                        <p>{{ trending.game.name }}</p>
                     </div>
                 </div>
+            </a>
             {% endfor %}
         </div>
 
         <h2>Games</h2>
         <div class="games-container">
             {% for game in games %}
+            <a href="{% url 'app:game' id=game.id %}" class="decoration-none">
                 <div class="game">
                     <img src="{{ game.image }}" alt="game name" width="225" height="150">
 
@@ -116,11 +117,10 @@
                             </div>
                         </div>
 
-                        <a href="{% url 'app:game' id=game.id %}" class="decoration-none">
-                            {{ game.name }}
-                        </a>
+                        <p>{{ game.name }}</p>
                     </div>
                 </div>
+            </a>
             {% endfor %}
         </div>
     </div>

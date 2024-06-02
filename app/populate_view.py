@@ -596,10 +596,8 @@ json_string = '''[
 
 
 def populate(req):
-    
     user1 = User.objects.create_user(username="usuarioficticio", password="senhaficticia", email="usuarioficticio@teste.com")
     user1.save()
-    print("TESTE!!!")
     user2 = User.objects.create_user(username="usuarioficticio2", password="senhaficticia2", email="usuarioficticio2@teste.com")
     user2.save()
     

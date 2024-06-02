@@ -3,7 +3,7 @@ from django.views import View
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.messages import constants
-from .models import Game, Review
+from .models import Game, Review, Profile
 from django.http import JsonResponse
 import json
 import math
@@ -18,6 +18,14 @@ def getUser(req):
         }
     }
     return context
+
+def searchGame(wishList, game):
+    for index, objeto in enumerate(wishList):
+        if objeto.name == game.name:
+            return index
+
+    return None
+
 
 class RootView(View):
     def get(self, req):
@@ -54,26 +62,120 @@ class RootView(View):
             return render(req, 'app/app.html', context)
         
         return redirect("autenticacao:signin")
-    
+
+
 class SearchView(View):
     def get(self, req):
         if(req.user.is_authenticated):
-            context = getUser(req)
+            user = User.objects.get(username=req.user)
+
+            context = {
+                "user": {
+                    "username": user.username,
+                    "email": user.email,
+                    "userId": user,
+                }
+            }
+
+            try:
+                profile = Profile.objects.get(user=user)
+
+            except:
+                profile = Profile.objects.create(user=user)
+                profile.save()
+                
             
             searchTerm = req.GET.get("search")
 
             games = Game.objects.all().filter(name__icontains=searchTerm)
 
-            context["games"] = games
+            wishList = profile.wishList.all()
+
+            context["games"] = []
+
+            for game in games:
+                index = searchGame(wishList, game)
+                
+                context["games"].append({
+                    "id": game.id,
+                    "name": game.name,
+                    "image": game.image,
+                    "onWishlist": True if index != None else False 
+                })
+
+            context["searchParams"] = searchTerm
+
+            return render(req, 'app/search.html', context)
+        
+        return redirect("autenticacao:signin")
+    
+    def post(self, req):
+        if(req.user.is_authenticated):
+            user = User.objects.get(username=req.user)
+
+            context = {
+                "user": {
+                    "username": user.username,
+                    "email": user.email,
+                    "userId": user,
+                }
+            }
+            
+            searchTerm = req.POST.get("searchParams")
+            gameName = req.POST.get("currentGame")
+            action = req.POST.get("action")
+
+            games = Game.objects.all().filter(name__icontains=searchTerm)
+            game = Game.objects.all().filter(name=gameName)[0]
+
+            try:
+                profile = Profile.objects.get(user=user)
+                if(game):
+                    if(action == "add"):
+                        profile.wishList.add(game)
+                    else:
+                        profile.wishList.remove(game)
+
+                profile.save()
+
+            except:
+                profile = Profile.objects.create(user=user)
+                if(game):
+                    if(action == "add"):
+                        profile.wishList.add(game)
+                    else:
+                        profile.wishList.remove(game)
+                    
+                profile.save()
+
+
+            wishList = profile.wishList.all()
+
+            context["games"] = []
+
+            for game in games:
+                index = searchGame(wishList, game)
+                
+                context["games"].append({
+                    "id": game.id,
+                    "name": game.name,
+                    "image": game.image,
+                    "onWishlist": True if index != None else False 
+                })
+
+            context["searchParams"] = searchTerm
 
             return render(req, 'app/search.html', context)
         
         return redirect("autenticacao:signin")
 
+
 class GameView(View):
     def get(self, req, id):
         if req.user.is_authenticated:
             context = getUser(req)
+            user = User.objects.get(username=req.user)
+
             try:
                 game = Game.objects.get(pk=id)
                 likes = game.like_set.filter(liked=True)
@@ -99,13 +201,29 @@ class GameView(View):
 
                 context["likes"] = len(likes)
                 
+                try:
+                    profile = Profile.objects.get(user=user)
+
+                except:
+                    profile = Profile.objects.create(user=user)
+                    profile.save()
+
+
+                wishList = profile.wishList.all()
+
+                index = searchGame(wishList, game)
+
+                context["onWishlist"] = True if index != None else False
                
                 try:
                     user_review = Review.objects.get(user=req.user, game=game)
                     context["user_review"] = user_review.text
+
                 except Review.DoesNotExist:
                     context["user_review"] = None
+
                 return render(req, 'app/game.html', context)
+            
             except Exception as e:
                 print("An error occurred:", e)
                 return redirect("app:root")
@@ -113,14 +231,22 @@ class GameView(View):
         return redirect("autenticacao:signin")
 
     def post(self, req, id):
+        action = req.POST.get("action")
 
-        if req.POST.get("action") == "submit_review":
+        if action == "submit_review":
             texto_da_review = req.POST.get("textoDaReview")
             if texto_da_review == "" or texto_da_review.isspace():
                 messages.add_message(req, constants.SUCCESS, "Review está vazia! Digite algo!")
                 return redirect("app:game", id=id)
             return self.criandoReview(req, id)
         
+        elif action == "wishlist":
+            wishlistAction = req.POST.get("wishlistAction")
+            gameId = req.POST.get("game")
+
+            return self.wishList(req=req, gameId=gameId, wishlistAction=wishlistAction)
+        
+
         typeAction = json.loads(req.body)["type"]
         
         if typeAction == "liking":
@@ -129,6 +255,32 @@ class GameView(View):
         elif typeAction == "rating":
             nota = json.loads(req.body)["nota"]
             return self.rateGame(req, id, nota)
+        
+    def wishList(self, req, gameId, wishlistAction):
+        user = User.objects.get(username=req.user)
+        game = Game.objects.get(pk=gameId)
+
+        try:
+            profile = Profile.objects.get(user=user)
+            
+            if(wishlistAction == "add"):
+                profile.wishList.add(game)
+            else:
+                profile.wishList.remove(game)
+
+            profile.save()
+
+        except:
+            profile = Profile.objects.create(user=user)
+            
+            if(wishlistAction == "add"):
+                profile.wishList.add(game)
+            else:
+                profile.wishList.remove(game)
+                
+            profile.save()
+
+        return redirect("app:game", id=gameId)
 
     def rateGame(self, req, id, nota):
         if req.user.is_authenticated:
@@ -252,11 +404,9 @@ class ReviewView(View):
 
     def like_post(self, req, id):
         try: 
-
             toLike = Review.objects.get(pk=id)
-            print("Exactly as planned11!2!")
-            usernamee = getUser(req)["user"]["username"]
-            user = User.objects.get(username=usernamee)
+            username = getUser(req)["user"]["username"]
+            user = User.objects.get(username=username)
 
             
             if user in toLike.liked_by.all():
@@ -275,6 +425,7 @@ class ReviewView(View):
         except Exception as e: #
             print(e)
             return redirect("app:root")
+        
     def delete_post(self, req, id):
         try:
             toDelete = Review.objects.get(pk=id)
@@ -286,3 +437,63 @@ class ReviewView(View):
         except Exception as e:
             print(e)
             return redirect("app:root")
+        
+
+class ProfileView(View):
+    def get(self, req):
+        if(req.user.is_authenticated):
+            user = User.objects.get(username=req.user)
+
+            try:
+                profile = Profile.objects.get(user=user)
+
+            except:
+                profile = Profile.objects.create(user=user)
+                    
+                profile.save()
+
+            context = {
+                "user": {
+                    "username": user.username,
+                    "email": user.email,
+                    "userId": user,
+                    "image": profile.image
+                }
+            }
+
+            context["wishlist"] = profile.wishList.all()
+
+            return render(req, 'app/profile.html', context)
+        
+        return redirect("autenticacao:signin")
+    
+    def post(self, req):
+        if(req.user.is_authenticated):
+            imageUrl = req.POST.get("url")
+
+            user = User.objects.get(username=req.user)
+
+            try:
+                profile = Profile.objects.get(user=user)
+                profile.image = imageUrl
+                profile.save()
+
+            except:
+                profile = Profile.objects.create(user=user, image=imageUrl)
+                    
+                profile.save()
+
+            context = {
+                "user": {
+                    "username": user.username,
+                    "email": user.email,
+                    "userId": user,
+                    "image": profile.image
+                }
+            }
+
+            context["wishlist"] = profile.wishList.all()
+
+            return render(req, 'app/profile.html', context)
+        
+        return redirect("autenticacao:signin")

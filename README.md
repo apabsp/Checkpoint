@@ -157,7 +157,6 @@ Para rodar em ambiente **local**, siga os passos:
 <summary>Entrega 1:</summary>
 
 ## Entrega 1:
-
 - [Link Screencast protótipo lo-fi](https://www.youtube.com/watch?v=2ysd68vxMM0)
 
 - Progresso no Jira
@@ -317,6 +316,88 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 **Resultado**: Conseguimos implementar com sucesso a funcionalidade de edição de reviews, permitindo aos usuários modificar suas avaliações de forma segura e intuitiva. O sistema de avaliação com estrelas também foi bem-sucedido, oferecendo uma interface agradável e fácil de usar. Os testes automatizados confirmaram a robustez das novas funcionalidades.
 
 **Conclusão**: As sessões de pair programming foram extremamente benéficas, não só para o desenvolvimento técnico das funcionalidades, mas também para o aprendizado mútuo e aprimoramento das nossas habilidades. A experiência reforçou a importância da colaboração e da comunicação eficaz no sucesso do projeto.
+
+</details>
+
+<br/>
+
+</details>
+
+<details>
+<summary>Entrega 4:</summary>
+
+## Entrega 4:
+
+<details>
+ <summary>Screencasts</summary>
+
+**Link do [Screencast do LoFi](link)**
+
+**Link do [Screencast do build e deploy com os testes](link)**
+
+
+**Link do [Screencast do Sistema](link)**
+
+
+**Link do [Screencast dos testes](link)**
+
+</details>
+
+<br/>
+
+<details>
+ <summary>Jira</summary>
+
+</details>
+
+<br/>
+<details>
+ <summary>Diagrama de Atividades</summary>
+
+
+</details>
+
+<br/>
+
+<details>
+ <summary>Bug Tracker</summary>
+    
+
+</details>
+
+<br/>
+
+<details>
+ <summary>Novas telas do Lo-fi</summary>
+
+  ![Editar Perfil](https://github.com/apabsp/Checkpoint/assets/130470569/1be3ec45-19b6-4ec4-9fc3-d0277da0c99a)
+
+</details>
+
+<br/>
+
+<details>
+<summary>Relatos de Pair Programming</summary>
+<br/>
+    
+**A1 e A2**: 
+
+**Resultado**:
+
+**Conclusão**: 
+
+**A3 e A4**: 
+
+**Resultado**:
+
+**Conclusão**: 
+
+**A5 e A6**: 
+
+**Resultado**:
+
+**Conclusão**: 
+
 
 </details>
 

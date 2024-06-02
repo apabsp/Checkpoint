@@ -1,0 +1,115 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'root/styles/style.css' %}">
+    <link rel="stylesheet" href="{% static 'app/styles/profile.css' %}">
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="profile-card">
+            <div id="image-profile">
+                {% if user.image %}
+                    <img src="{{user.image}}" alt="{{user.username}}" width="3000" height="3000">
+                {% else %}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>    
+                {% endif %}
+            </div>
+
+            <div class="container-data">
+                <h1>{{user.username}}</h1>
+                <p>{{user.email}}</p>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <h1>Últimas Reviews</h1>
+    
+            <div class="games-container">
+            </div>
+            
+            <h1>Lista de desejos</h1>
+            
+            <div class="games-container">
+                {% for game in wishlist %}
+                    <a href="{% url 'app:game' id=game.id %}" class="decoration-none">
+                        <div class="game">
+                            <img src="{{ game.image }}" alt="game name" width="225" height="150">
+    
+                            <div class="game-content">
+                                <div>
+                                    <div class="platforms">
+                                        {% for platform in game.platforms %}
+                                            {% if platform == "PC" %}
+                                                <svg width="15" height="15" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_133_2865)">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.48752 6.26045C5.49053 7.45979 5.49414 9.49752 5.49714 11.0813C7.66556 11.3745 9.83399 11.6768 11.9988 12C11.9988 10.1092 12.0012 8.22674 11.9988 6.42773C9.82857 6.42773 7.65895 6.26045 5.48752 6.26045ZM0 6.26104V10.333C1.63549 10.5537 3.27098 10.7646 4.90346 11.0057C4.90647 9.43033 4.90226 7.85454 4.90226 6.2792C3.26797 6.2822 1.63429 6.25564 0 6.26104ZM0 1.70596V5.7665C1.63549 5.7707 3.27098 5.74595 4.90647 5.74775C4.90526 4.17602 4.90526 2.60621 4.90346 1.03447C3.26677 1.23896 1.63008 1.4553 0 1.70596ZM12 5.68301C9.83278 5.6914 7.66556 5.72445 5.49714 5.73105C5.49594 4.13353 5.49594 2.53792 5.49714 0.941602C7.66135 0.611182 9.83038 0.300432 11.9988 0C12 1.89496 11.9988 3.78805 12 5.68301Z" fill="#E0E0E0"/>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_133_2865">
+                                                            <rect width="12" height="12" fill="white"/>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            {% elif platform == "Xbox" %}
+                                                <svg width="15" height="15" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_133_2870)">
+                                                        <path d="M2.051 10.5165C3.1055 11.4405 4.4885 12 6 12C7.513 12 8.8945 11.4405 9.951 10.5165C10.8895 9.5605 7.793 6.162 6 4.808C4.209 6.162 1.1105 9.5605 2.051 10.5165ZM7.631 3.3135C8.881 4.794 11.373 8.47 10.669 9.7695C11.501 8.74 12 7.4305 12 6.002C12 4.332 11.3175 2.821 10.215 1.734C10.215 1.734 10.2015 1.723 10.174 1.713C10.1425 1.702 10.098 1.6905 10.0335 1.6905C9.7375 1.6905 9.041 1.9075 7.631 3.3135ZM1.827 1.713C1.7985 1.723 1.786 1.7335 1.784 1.734C0.6825 2.821 0 4.332 0 6.002C0 7.429 0.499 8.7385 1.3305 9.7685C0.63 8.466 3.12 4.793 4.3705 3.3135C2.9605 1.907 2.2625 1.691 1.9675 1.691C1.902 1.691 1.856 1.7015 1.827 1.714V1.713ZM6 1.7755C6 1.7755 4.5275 0.914 3.3775 0.873C2.926 0.8565 2.6505 1.0205 2.617 1.0425C3.6895 0.323 4.8295 0 5.992 0H6C7.167 0 8.3025 0.323 9.383 1.0425C9.349 1.0195 9.0755 0.8565 8.623 0.873C7.473 0.914 6 1.7725 6 1.7725V1.7755Z" fill="#E0E0E0"/>
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_133_2870">
+                                                            <rect width="12" height="12" fill="white"/>
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            {% elif platform == "Playstation" %}
+                                                <svg width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.9312 5.55078C10.9093 5.0832 10.841 4.60742 10.6359 4.18086C10.5234 3.94484 10.3708 3.73018 10.1847 3.54648C10.0103 3.37376 9.8146 3.22399 9.60231 3.10078C9.13473 2.82188 8.57691 2.63594 7.29449 2.25313C6.01207 1.87031 5.25 1.75 5.25 1.75V11.5473L7.43477 12.25C7.43477 12.25 7.4375 6.81406 7.4375 4.06055V3.95664C7.4375 3.70234 7.64258 3.49727 7.87773 3.49727H7.89141C8.12383 3.49727 8.31523 3.70234 8.31523 3.95664V7.60156C8.61602 7.74648 9.11367 7.85586 9.4582 7.85039C9.68682 7.85676 9.91311 7.80302 10.1145 7.69453C10.3222 7.57963 10.4959 7.41168 10.6176 7.20781C10.7534 6.97795 10.8452 6.7248 10.8883 6.46133C10.9394 6.16602 10.9421 5.85703 10.9312 5.55078Z" fill="#E0E0E0"/>
+                                                    <path d="M2.36982 9.78361C3.11904 9.51564 4.81162 8.97696 4.81162 8.97696V7.68634C4.81162 7.68634 2.71982 8.36447 1.76826 8.70079C1.5331 8.78556 1.29521 8.86212 1.06553 8.96056C0.797558 9.07267 0.535058 9.19845 0.297167 9.36525C0.190441 9.43353 0.103656 9.5288 0.0456045 9.64142C0.0183949 9.69929 0.00315817 9.76206 0.000808779 9.82596C-0.00154061 9.88986 0.0090458 9.95358 0.0319326 10.0133C0.0866201 10.1527 0.190526 10.2676 0.308104 10.3578C0.521386 10.5192 0.775682 10.6176 1.02998 10.6914C1.80898 10.95 2.62657 11.073 3.44717 11.0551C3.84365 11.0496 4.43154 11.0031 4.81435 10.9348V9.78634C4.81435 9.78634 4.51357 9.8547 3.68506 10.1281C3.55928 10.1692 3.43349 10.2184 3.30224 10.2457C3.10798 10.2861 2.91005 10.3063 2.71162 10.3059C2.53389 10.2977 2.35068 10.2867 2.18389 10.2211C2.12373 10.1938 2.0581 10.1609 2.0335 10.0953C2.01162 10.0406 2.0417 9.98595 2.07998 9.94767C2.15654 9.86837 2.26592 9.82462 2.36982 9.78361Z" fill="#E0E0E0"/>
+                                                    <path d="M14 9.45821C13.9973 9.29415 13.8988 9.15197 13.784 9.04806C13.5898 8.87579 13.3492 8.76642 13.1086 8.67892C12.9582 8.62696 12.8543 8.58868 12.7066 8.5422C12.0176 8.31798 11.2875 8.23595 10.5656 8.23322C10.3469 8.24142 9.93398 8.24689 9.71797 8.2715C9.11914 8.33986 7.87773 8.69259 7.87773 8.69259V10.027C7.87773 10.027 9.72344 9.43634 10.5164 9.15743C10.7839 9.07067 11.0637 9.02819 11.3449 9.03165C11.5227 9.03712 11.7059 9.05079 11.8754 9.11642C11.9355 9.14103 11.9984 9.17657 12.0258 9.23946C12.0504 9.31056 12.0012 9.37618 11.9465 9.4172C11.818 9.52111 11.6539 9.56212 11.5035 9.61954C10.3824 10.016 7.875 10.8418 7.875 10.8418V12.127C7.875 12.127 11.0797 11.0442 12.5453 10.5192C12.7887 10.4289 13.0348 10.3524 13.2672 10.2348C13.4832 10.1254 13.6992 9.99962 13.8633 9.81642C13.9512 9.71777 13.9998 9.59032 14 9.45821Z" fill="#E0E0E0"/>
+                                                </svg>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                
+                                <p>{{ game.name }}</p>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+
+    <div class="edit-profile-modal">
+        <div>
+            <button id="closeModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> 
+            </button>
+
+            <h2>Editar perfil</h2>
+
+            <form method="post" class="url-insert">
+                {% csrf_token %}
+                <label for="url">Imagem de Perfil</label>
+                <input type="text" name="url" id="url" placeholder="insira a url da imagem">
+
+                <button type="submit" class="save-button">Salvar</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        function toggleModal() {
+            const modal = document.getElementsByClassName("edit-profile-modal")[0];
+            modal.classList.toggle("active");
+        }
+
+        document.getElementById("image-profile")?.addEventListener("click", toggleModal);
+        document.getElementById("closeModal")?.addEventListener("click", toggleModal);
+    </script>
+{% endblock %}
