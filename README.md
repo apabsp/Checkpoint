@@ -383,43 +383,42 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <details>
 <summary>Relatos de Pair Programming</summary>
 <br/>
-    
-### Antônio Paulo e Clara Machado
 
-**Tarefas Principais:**
-Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de curtir uma review, realizar melhorias no front-end e implementar testes utilizando Cypress.
+## João Pedro Fontes e Heloísa Tanaka
 
-**Resultado:**
-A implementação da funcionalidade de curtir uma review foi concluída de forma eficiente, aproveitando nosso conhecimento prévio de React e Redux. As melhorias no front-end foram bem-sucedidas, após um estudo detalhado de design e usabilidade. Para os testes com Cypress, conseguimos rapidamente implementar testes automatizados, garantindo a robustez da nova funcionalidade.
+Durante nossas sessões recentes de pair programming, focamos em implementar duas histórias importantes: editar perfil e adicionar à wish list, além de desenvolver testes utilizando Cypress.
 
-**Conclusão:**
-O pair programming nos permitiu aprofundar nosso entendimento sobre a importância dos testes automatizados com Cypress, além de melhorar nossas habilidades em design de interface e trabalho colaborativo.
+### Resultado
 
----
+A implementação das funcionalidades de editar perfil e adicionar à wish list ocorreu de maneira fluida, beneficiando-se da nossa colaboração próxima e da compreensão compartilhada do projeto. Nos testes com Cypress, dedicamos tempo para compreender a ferramenta, resultando em testes automatizados eficazes.
 
-### João Pedro Maranhão e Larissa Sobrinho
+### Conclusão
 
-**Tarefas Principais:**
-Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de editar o perfil (focando na edição da foto), realizar melhorias no front-end e automatizar testes com Cypress.
+O pair programming nos proporcionou uma oportunidade valiosa para aprimorar nossas habilidades técnicas, especialmente em relação ao desenvolvimento web e ao uso de ferramentas de teste como o Cypress. Além disso, fortaleceu nossa capacidade de trabalhar em equipe e colaborar de maneira eficaz.
 
-**Resultado:**
-A implementação da funcionalidade de edição de perfil, especificamente a atualização da foto, foi realizada com algumas dificuldades iniciais, mas conseguimos superar utilizando as ferramentas de manipulação de imagens disponíveis. As melhorias no front-end incluíram otimizações significativas na interface do usuário. Conseguimos automatizar testes de ponta a ponta com Cypress, garantindo a estabilidade e a qualidade da funcionalidade de edição de perfil.
+## João Pedro Maranhão e Larissa Sobrinho
 
-**Conclusão:**
-O pair programming foi essencial para aprimorarmos nossas habilidades em manipulação de imagens e front-end, além de fortalecer nossa colaboração e comunicação em equipe.
+Durante nossas sessões recentes de pair programming, concentramo-nos em aprimorar o front-end e realizar melhorias no restante do projeto, incluindo os slides e outras áreas.
 
----
+### Resultado
 
-### João Pedro Fontes e Heloísa Tanaka
+O processo de atualização do front-end e das demais partes do projeto foi conduzido de forma colaborativa e eficiente. Através de iterações cuidadosas, conseguimos melhorar a aparência e a usabilidade do projeto de forma significativa.
 
-**Tarefas Principais:**
-Durante nossas sessões recentes de pair programming, focamos em três tarefas principais: implementar a história de adicionar um jogo à wishlist, realizar melhorias no back-end e automatizar testes com Cypress.
+### Conclusão
 
-**Resultado:**
-A funcionalidade de adicionar um jogo à wishlist foi implementada com sucesso, utilizando um design eficiente e uma lógica de negócios clara. No entanto, a implementação não foi isenta de dificuldades. Encontramos desafios ao integrar a funcionalidade com a interface do usuário e ajustar a lógica de negócios para cobrir todos os cenários possíveis. As melhorias no back-end resultaram em um sistema mais robusto e eficiente. Conseguimos implementar testes de integração com Cypress que cobrem os principais fluxos do sistema, garantindo a qualidade e a estabilidade das novas implementações.
+O pair programming destacou a importância da comunicação e da colaboração em equipe para alcançar resultados de alta qualidade. Aprendemos muito sobre design de interface e desenvolvimento front-end, o que nos permitirá enfrentar desafios futuros com mais confiança.
 
-**Conclusão:**
-O pair programming nos ajudou a melhorar nossas habilidades em back-end e testes de integração, além de promover uma colaboração eficaz e uma troca constante de conhecimentos. As dificuldades encontradas durante o processo nos ensinaram a importância da persistência e da comunicação clara.
+## Antônio Paulo e Clara Machado
+
+Durante nossas sessões recentes de pair programming, nos concentramos na implementação da funcionalidade de curtir reviews e na criação de testes automatizados utilizando Cypress.
+
+### Resultado
+
+A implementação da funcionalidade de curtir reviews foi ágil, graças à nossa compreensão sólida da arquitetura do projeto. Além disso, dedicamos tempo para explorar os testes automatizados com Cypress, garantindo a qualidade e confiabilidade do código.
+
+### Conclusão
+
+O pair programming demonstrou ser uma abordagem eficaz para acelerar o desenvolvimento e garantir a qualidade do código. Aprendemos não apenas sobre as funcionalidades específicas do projeto, mas também sobre as melhores práticas de teste, o que beneficiará nosso trabalho futuro.
 
 </details>
 
