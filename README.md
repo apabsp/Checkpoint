@@ -349,6 +349,11 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 <details>
  <summary>Jira</summary>
+  
+![Captura de tela 2024-06-03 173852](https://github.com/apabsp/Checkpoint/assets/142419152/82ddfe6e-97c1-4982-a1f7-d1654cbb6016)
+![Captura de tela 2024-06-03 173952](https://github.com/apabsp/Checkpoint/assets/142419152/78250ec9-d9fc-4d14-8216-b6065f5846f6)
+
+
 
 </details>
 
