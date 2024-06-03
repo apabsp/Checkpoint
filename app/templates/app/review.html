@@ -22,7 +22,7 @@
             </div>
             
             <div class="actions-container">
-                <form action="" method="post" class="like-container">
+                <form method="post" class="like-container">
                     {% csrf_token %}
                     <input type="hidden" value="like" name="action">
                     <button type="submit" id="like-review">
@@ -99,7 +99,7 @@
         function toggleModal() {
             const modal = document.getElementsByClassName("edit-review-modal")[0];
             const reviewInputText = document.getElementById("review-text");
-            reviewInputText.value = "{{review.text}}"
+            reviewInputText.value = `{{review.text}}`;
             
             modal.classList.toggle("active");
         }

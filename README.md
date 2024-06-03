@@ -333,7 +333,7 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 **Link do [Screencast do LoFi](https://drive.google.com/file/d/1_cblsfSAV3-qgVoli3GXO3WtDU_DTQX9/view?usp=sharing)**
 
-**Link do [Screencast do build e deploy com os testes](link)**
+**Link do [Screencast do build e deploy com os testes](https://drive.google.com/file/d/1yIxu6EHwEGITw3BFteW7Hqurgfi6u2XI/view?usp=sharing)**
 
 
 **Link do [Screencast do Sistema](https://drive.google.com/file/d/1d3ZZhPALKAYAOU2Dx9fOS-WyJ0PS5NkA/view?usp=sharing)**
@@ -354,6 +354,10 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <details>
  <summary>Diagrama de Atividades</summary>
 
+![Sem título](https://github.com/apabsp/Checkpoint/assets/95260401/9a7fe9ba-bcea-48e4-8c02-0e235ea81908)
+
+
+
 
 </details>
 
@@ -370,7 +374,7 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <details>
  <summary>Novas telas do Lo-fi</summary>
 
-  ![Editar Perfil](https://github.com/apabsp/Checkpoint/assets/130470569/1be3ec45-19b6-4ec4-9fc3-d0277da0c99a)
+![Editar Perfil](https://github.com/apabsp/Checkpoint/assets/130470569/1be3ec45-19b6-4ec4-9fc3-d0277da0c99a)
 
 </details>
 
@@ -379,26 +383,49 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 <details>
 <summary>Relatos de Pair Programming</summary>
 <br/>
-    
-**A1 e A2**: 
 
-**Resultado**:
+## João Pedro Fontes e Heloísa Tanaka
 
-**Conclusão**: 
+Durante nossas sessões recentes de pair programming, focamos em implementar duas histórias importantes: editar perfil e adicionar à wish list, além de desenvolver testes utilizando Cypress.
 
-**A3 e A4**: 
+### Resultado
 
-**Resultado**:
+A implementação das funcionalidades de editar perfil e adicionar à wish list ocorreu de maneira fluida, beneficiando-se da nossa colaboração próxima e da compreensão compartilhada do projeto. Nos testes com Cypress, dedicamos tempo para compreender a ferramenta, resultando em testes automatizados eficazes.
 
-**Conclusão**: 
+### Conclusão
 
-**A5 e A6**: 
+O pair programming nos proporcionou uma oportunidade valiosa para aprimorar nossas habilidades técnicas, especialmente em relação ao desenvolvimento web e ao uso de ferramentas de teste como o Cypress. Além disso, fortaleceu nossa capacidade de trabalhar em equipe e colaborar de maneira eficaz.
 
-**Resultado**:
+## João Pedro Maranhão e Larissa Sobrinho
 
-**Conclusão**: 
+Durante nossas sessões recentes de pair programming, concentramo-nos em aprimorar o front-end e realizar melhorias no restante do projeto, incluindo os slides e outras áreas.
+
+### Resultado
+
+O processo de atualização do front-end e das demais partes do projeto foi conduzido de forma colaborativa e eficiente. Através de iterações cuidadosas, conseguimos melhorar a aparência e a usabilidade do projeto de forma significativa.
+
+### Conclusão
+
+O pair programming destacou a importância da comunicação e da colaboração em equipe para alcançar resultados de alta qualidade. Aprendemos muito sobre design de interface e desenvolvimento front-end, o que nos permitirá enfrentar desafios futuros com mais confiança.
+
+## Antônio Paulo e Clara Machado
+
+Durante nossas sessões recentes de pair programming, nos concentramos na implementação da funcionalidade de curtir reviews e na criação de testes automatizados utilizando Cypress.
+
+### Resultado
+
+A implementação da funcionalidade de curtir reviews foi ágil, graças à nossa compreensão sólida da arquitetura do projeto. Além disso, dedicamos tempo para explorar os testes automatizados com Cypress, garantindo a qualidade e confiabilidade do código.
+
+### Conclusão
+
+O pair programming demonstrou ser uma abordagem eficaz para acelerar o desenvolvimento e garantir a qualidade do código. Aprendemos não apenas sobre as funcionalidades específicas do projeto, mas também sobre as melhores práticas de teste, o que beneficiará nosso trabalho futuro.
+
+</details>
 
 
+<details>
+  <summary>Apresentação</summary>
+  <a href = "https://www.canva.com/design/DAGG5ijomFw/jP5BQBSNdbgOr31hjaF_sA/view?utm_content=DAGG5ijomFw&utm_campaign=designshare&utm_medium=link&utm_source=editor"> Apresentação</a>
 </details>
 
 <br/>
