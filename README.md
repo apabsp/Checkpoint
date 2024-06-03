@@ -367,7 +367,9 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 <details>
  <summary>Bug Tracker</summary>
-    
+
+![Captura de tela 2024-06-03 172806](https://github.com/apabsp/Checkpoint/assets/142419152/19bf4f11-3769-4fbc-a945-d37662603bd5)
+![Captura de tela 2024-06-03 172830](https://github.com/apabsp/Checkpoint/assets/142419152/bf1ce29d-81c8-40ac-9a00-071ba8b19259)
 
 </details>
 
