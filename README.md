@@ -323,6 +323,8 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 
 </details>
 
+<br/>
+
 <details>
 <summary>Entrega 4:</summary>
 
@@ -422,6 +424,7 @@ O pair programming demonstrou ser uma abordagem eficaz para acelerar o desenvolv
 
 </details>
 
+<br/>
 
 <details>
   <summary>Apresentação</summary>
