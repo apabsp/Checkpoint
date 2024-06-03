@@ -422,6 +422,12 @@ O pair programming demonstrou ser uma abordagem eficaz para acelerar o desenvolv
 
 </details>
 
+
+<details>
+  <summary>Apresentação</summary>
+  <a href = "https://www.canva.com/design/DAGG5ijomFw/jP5BQBSNdbgOr31hjaF_sA/view?utm_content=DAGG5ijomFw&utm_campaign=designshare&utm_medium=link&utm_source=editor"> Apresentação</a>
+</details>
+
 <br/>
 
 </details>
