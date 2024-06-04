@@ -338,7 +338,9 @@ Ao entrar no site, o usuário será solicitado a fazer login em sua conta (ou re
 **Link do [Screencast do build e deploy com os testes](https://drive.google.com/file/d/1yIxu6EHwEGITw3BFteW7Hqurgfi6u2XI/view?usp=sharing)**
 
 
-**Link do [Screencast do Sistema](https://drive.google.com/file/d/1d3ZZhPALKAYAOU2Dx9fOS-WyJ0PS5NkA/view?usp=sharing)**
+**Link do [Screencast do Sistema](TODO STILL)**
+
+**Link do [Screencast da Pipeline do Branch de Desenvolvimento com testes](TODO STILL)**
 
 
 **Link do [Screencast dos testes](https://drive.google.com/file/d/1BX4eyS2HXYqywU8-uIANL2kGyWjfZNV5/view?usp=sharing)**
